@@ -1,0 +1,23 @@
+C:\Users\olimp\OneDrive\Рабочий стол\C# Projects\Traffic Laws\bin\Debug\net7.0-windows\Traffic Laws.exe
+C:\Users\olimp\OneDrive\Рабочий стол\C# Projects\Traffic Laws\bin\Debug\net7.0-windows\Traffic Laws.deps.json
+C:\Users\olimp\OneDrive\Рабочий стол\C# Projects\Traffic Laws\bin\Debug\net7.0-windows\Traffic Laws.runtimeconfig.json
+C:\Users\olimp\OneDrive\Рабочий стол\C# Projects\Traffic Laws\bin\Debug\net7.0-windows\Traffic Laws.dll
+C:\Users\olimp\OneDrive\Рабочий стол\C# Projects\Traffic Laws\bin\Debug\net7.0-windows\Traffic Laws.pdb
+C:\Users\olimp\OneDrive\Рабочий стол\C# Projects\Traffic Laws\obj\Debug\net7.0-windows\Traffic Laws.csproj.AssemblyReference.cache
+C:\Users\olimp\OneDrive\Рабочий стол\C# Projects\Traffic Laws\obj\Debug\net7.0-windows\MainWindow.g.cs
+C:\Users\olimp\OneDrive\Рабочий стол\C# Projects\Traffic Laws\obj\Debug\net7.0-windows\App.g.cs
+C:\Users\olimp\OneDrive\Рабочий стол\C# Projects\Traffic Laws\obj\Debug\net7.0-windows\Traffic Laws_MarkupCompile.cache
+C:\Users\olimp\OneDrive\Рабочий стол\C# Projects\Traffic Laws\obj\Debug\net7.0-windows\Traffic Laws_MarkupCompile.lref
+C:\Users\olimp\OneDrive\Рабочий стол\C# Projects\Traffic Laws\obj\Debug\net7.0-windows\MainWindow.baml
+C:\Users\olimp\OneDrive\Рабочий стол\C# Projects\Traffic Laws\obj\Debug\net7.0-windows\Traffic Laws.g.resources
+C:\Users\olimp\OneDrive\Рабочий стол\C# Projects\Traffic Laws\obj\Debug\net7.0-windows\Traffic Laws.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\olimp\OneDrive\Рабочий стол\C# Projects\Traffic Laws\obj\Debug\net7.0-windows\Traffic Laws.AssemblyInfoInputs.cache
+C:\Users\olimp\OneDrive\Рабочий стол\C# Projects\Traffic Laws\obj\Debug\net7.0-windows\Traffic Laws.AssemblyInfo.cs
+C:\Users\olimp\OneDrive\Рабочий стол\C# Projects\Traffic Laws\obj\Debug\net7.0-windows\Traffic Laws.csproj.CoreCompileInputs.cache
+C:\Users\olimp\OneDrive\Рабочий стол\C# Projects\Traffic Laws\obj\Debug\net7.0-windows\Traffic Laws.dll
+C:\Users\olimp\OneDrive\Рабочий стол\C# Projects\Traffic Laws\obj\Debug\net7.0-windows\refint\Traffic Laws.dll
+C:\Users\olimp\OneDrive\Рабочий стол\C# Projects\Traffic Laws\obj\Debug\net7.0-windows\Traffic Laws.pdb
+C:\Users\olimp\OneDrive\Рабочий стол\C# Projects\Traffic Laws\obj\Debug\net7.0-windows\Traffic Laws.genruntimeconfig.cache
+C:\Users\olimp\OneDrive\Рабочий стол\C# Projects\Traffic Laws\obj\Debug\net7.0-windows\ref\Traffic Laws.dll
+C:\Users\olimp\OneDrive\Рабочий стол\C# Projects\Traffic Laws\obj\Debug\net7.0-windows\Rules.g.cs
+C:\Users\olimp\OneDrive\Рабочий стол\C# Projects\Traffic Laws\obj\Debug\net7.0-windows\Rules.baml

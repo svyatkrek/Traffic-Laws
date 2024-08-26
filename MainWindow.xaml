@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Traffic_Laws"
         mc:Ignorable="d"
-        Title="MainWindow" Height="720" Width="1080">
+        Title="MainWindow" Height="720" Width="1080" WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -91,10 +91,11 @@
         <Grid VerticalAlignment="Bottom" Width="1080" Height="340">
             <Image Margin="20" HorizontalAlignment="Left" Width="399" Height="167" Source="/resources/truck.png"/>
             <Grid HorizontalAlignment="Center">
-                <Image HorizontalAlignment="Center" Width="233" Height="337" Source="\Resources\table.png"/>
-                <RadioButton x:Name="r1b" Style="{DynamicResource RadioB}" Click="RadioButton_Checked" Margin="0,0,20,213" Height="22" Content="Статистика" FontFamily="Jockey One" FontSize="20" Foreground="White" HorizontalAlignment="Center" Checked="RadioButton_Checked" />
-                <RadioButton x:Name="b_category_button" Style="{DynamicResource RadioB}" Margin="0,0,0,100" Height="22" Content="Категория “B” " FontFamily="Jockey One" FontSize="18" Foreground="White" HorizontalAlignment="Center" Checked="b_category_button_Checked"/>
-                <RadioButton x:Name="c_category_button" Style="{DynamicResource RadioB}" Margin="0,0,25,-10" Height="22" Content="Категория “C” " FontFamily="Jockey One" FontSize="18" Foreground="White" HorizontalAlignment="Center" Checked="c_category_button_Checked"/>
+                <Image HorizontalAlignment="Center" Width="233" Height="337" Source="\Resources\table.png" Margin="0,3,0,0"/>
+                <Button x:Name="checkedButton1" Content="Статистика" FontSize="22"  Foreground="White"  Background="{x:Null}" Margin="34,48,37,262" BorderBrush="{x:Null}" Click="ButtonCheck_Click"/>
+                <Button x:Name="checkedButton2" Content="Категория Б" FontSize="22"  Foreground="White" Background="{x:Null}" Margin="52,102,37,208" BorderBrush="{x:Null}" Click="ButtonCheck_Click"/>
+                <Button x:Name="checkedButton3" Content="Экзамен" FontSize="22"  Foreground="White" Background="{x:Null}" Margin="22,154,63,154" BorderBrush="{x:Null}" Click="ButtonCheck_Click" />
+
             </Grid>
             <Image Margin="0 0 60 -40" Width="350" Height="124" HorizontalAlignment="Right" Source="\Resources\car.png"/>
         </Grid>

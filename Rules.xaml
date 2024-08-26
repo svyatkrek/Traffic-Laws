@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Traffic_Laws"
         mc:Ignorable="d"
-        Title="Rules" Height="720" Width="1080">
+        Title="Rules" Height="720" Width="1080" WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">

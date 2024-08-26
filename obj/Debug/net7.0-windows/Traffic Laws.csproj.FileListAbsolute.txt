@@ -21,3 +21,26 @@ C:\Users\olimp\OneDrive\Рабочий стол\C# Projects\Traffic Laws\obj\Deb
 C:\Users\olimp\OneDrive\Рабочий стол\C# Projects\Traffic Laws\obj\Debug\net7.0-windows\ref\Traffic Laws.dll
 C:\Users\olimp\OneDrive\Рабочий стол\C# Projects\Traffic Laws\obj\Debug\net7.0-windows\Rules.g.cs
 C:\Users\olimp\OneDrive\Рабочий стол\C# Projects\Traffic Laws\obj\Debug\net7.0-windows\Rules.baml
+C:\Users\Mark\Desktop\project\Traffic-Laws\bin\Debug\net7.0-windows\Traffic Laws.exe
+C:\Users\Mark\Desktop\project\Traffic-Laws\bin\Debug\net7.0-windows\Traffic Laws.deps.json
+C:\Users\Mark\Desktop\project\Traffic-Laws\bin\Debug\net7.0-windows\Traffic Laws.runtimeconfig.json
+C:\Users\Mark\Desktop\project\Traffic-Laws\bin\Debug\net7.0-windows\Traffic Laws.dll
+C:\Users\Mark\Desktop\project\Traffic-Laws\bin\Debug\net7.0-windows\Traffic Laws.pdb
+C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\MainWindow.g.cs
+C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Rules.g.cs
+C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\App.g.cs
+C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Traffic Laws_MarkupCompile.cache
+C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Traffic Laws_MarkupCompile.lref
+C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\MainWindow.baml
+C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Rules.baml
+C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Traffic Laws.g.resources
+C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Traffic Laws.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Traffic Laws.AssemblyInfoInputs.cache
+C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Traffic Laws.AssemblyInfo.cs
+C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Traffic Laws.csproj.CoreCompileInputs.cache
+C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Traffic Laws.sourcelink.json
+C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Traffic Laws.dll
+C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\refint\Traffic Laws.dll
+C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Traffic Laws.pdb
+C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Traffic Laws.genruntimeconfig.cache
+C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\ref\Traffic Laws.dll

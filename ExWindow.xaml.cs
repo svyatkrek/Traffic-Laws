@@ -15,20 +15,13 @@ using System.Windows.Shapes;
 namespace Traffic_Laws
 {
     /// <summary>
-    /// Логика взаимодействия для Rules.xaml
+    /// Логика взаимодействия для ExWindow.xaml
     /// </summary>
-    public partial class Rules : Window
+    public partial class ExWindow : Window
     {
-        public Rules()
+        public ExWindow()
         {
             InitializeComponent();
-        }
-
-        private void Menu_Button_Click(object sender, RoutedEventArgs e)
-        {
-            MainWindow menu = new();
-            menu.Show();
-            this.Hide();
         }
     }
 }

@@ -21,7 +21,6 @@ namespace Traffic_Laws
     /// </summary>
     public partial class MainWindow : Window
     {
-        public string activeButtonCheck = "";
         public MainWindow()
         {
             InitializeComponent();
@@ -34,28 +33,56 @@ namespace Traffic_Laws
             this.Hide();
         }
 
+        private void RadioButton_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
 
+        }
 
-		private void ButtonCheck_Click(object sender, RoutedEventArgs e)
-		{
-            Button button = e.Source as Button;
-            button.Foreground = Brushes.Green;
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            bool? isCheck1 = r1b.IsChecked;
+            if (isCheck1 == true)
+            {
 
-            if (checkedButton1.Content.ToString() == activeButtonCheck) {
-                checkedButton1.Foreground = Brushes.White;
+                RadioButton rb = e.Source as RadioButton;
+                rb.Foreground = Brushes.Green;
             }
-			if (checkedButton2.Content.ToString() == activeButtonCheck)
-			{
-				checkedButton2.Foreground = Brushes.White;
-			}
-			if (checkedButton3.Content.ToString() == activeButtonCheck)
-			{
-				checkedButton3.Foreground = Brushes.White;
-			}
-            activeButtonCheck = button.Content.ToString();
+        }
 
-		}
-	}
+        private void b_category_button_Checked(object sender, RoutedEventArgs e)
+        {
+            bool? isCheck1 = b_category_button.IsChecked;
+            bool? isCheck2 = c_category_button.IsChecked;
+            if(isCheck1 == true && isCheck2 == false)
+            {
+                RadioButton rb = e.Source as RadioButton;
+                rb.Foreground = Brushes.Green;
+            }
+            else
+            {
+                c_category_button.IsChecked = false;
+                RadioButton rb = e.Source as RadioButton;
+                rb.Foreground = Brushes.Green;
+            }
+        }
+
+        private void c_category_button_Checked(object sender, RoutedEventArgs e)
+        {
+            bool? isCheck1 = b_category_button.IsChecked;
+            bool? isCheck2 = c_category_button.IsChecked;
+            if (isCheck1 == false && isCheck2 == true)
+            {
+                RadioButton rb = e.Source as RadioButton;
+                rb.Foreground = Brushes.Green;
+            }
+            else
+            {
+                b_category_button.IsChecked = false;
+                RadioButton rb = e.Source as RadioButton;
+                rb.Foreground = Brushes.Green;
+            }
+        }
+    }
 }
 
 // Для экзаменов берем tickets, рандомный билет из 40, смотреть на выбор категории

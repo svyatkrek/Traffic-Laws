@@ -1,0 +1,27 @@
+﻿<Window x:Class="Traffic_Laws.FinalWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Traffic_Laws"
+        mc:Ignorable="d"
+        Title="FinalWindow" Height="720" Width="1080" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="450"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="\images\mainImage.png"/>
+        </Grid.Background>
+        <Button Width="100" Height="60" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20" FontSize="30" Content="Меню" Click="Menu_Button_Click" Style="{DynamicResource ButtonStyleMainMenu}" Foreground="White"/>
+        <Grid Grid.Column="1">
+            <Label x:Name="mainLabel" Content="Ваш " Style="{DynamicResource labelFinal}" Margin="0,136,0,0" FontSize="45"/>
+            <Label x:Name="amountLabel" Content="Количество вопросов: " Style="{DynamicResource labelFinal}" Margin="0,229,0,0" />
+            <Label x:Name="amountUncorrectLabel" Content="Количество неправильных ответов: " Style="{DynamicResource labelFinal}" Margin="0,318,0,0" />
+            <Label x:Name="amountCorrectLabel" Content="Количество правильных ответов: " Style="{DynamicResource labelFinal}" Margin="0,273,0,0" />
+            <Label x:Name="timeLabel" Content="Времени затрачено: " Style="{DynamicResource labelFinal}" Margin="0,357,0,0"  />
+        </Grid>
+        <Image x:Name="imageFinal" HorizontalAlignment="Left" Height="322" Margin="70,147,0,0" VerticalAlignment="Top" Width="305"/>
+    </Grid>
+</Window>

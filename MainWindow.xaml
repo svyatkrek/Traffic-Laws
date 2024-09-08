@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Traffic_Laws"
         mc:Ignorable="d"
-        Title="MainWindow" Height="720" Width="1080">
+        Title="MainWindow" Height="720" Width="1080" WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
         <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
@@ -19,38 +19,30 @@
     </Window.Resources>
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="\Resources\mainImage.png"/>
+            <ImageBrush ImageSource="\images\mainImage.png"/>
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <Grid VerticalAlignment="Bottom" Width="1080" Height="340">
-            <Image Margin="20" HorizontalAlignment="Left" Width="399" Height="167" Source="/resources/truck.png"/>
-            <Grid HorizontalAlignment="Center">
-                <Image HorizontalAlignment="Center" Width="233" Height="337" Source="\Resources\table.png"/>
-                <RadioButton x:Name="r1b" Style="{DynamicResource RadioB}" Click="RadioButton_Checked" Margin="0,0,20,213" Height="22" Content="Статистика" FontFamily="Jockey One" FontSize="20" Foreground="White" HorizontalAlignment="Center" Checked="RadioButton_Checked" />
-                <RadioButton x:Name="b_category_button" Style="{DynamicResource RadioB}" Margin="0,0,0,100" Height="22" Content="Категория “B” " FontFamily="Jockey One" FontSize="18" Foreground="White" HorizontalAlignment="Center" Checked="b_category_button_Checked"/>
-                <RadioButton x:Name="c_category_button" Style="{DynamicResource RadioB}" Margin="0,0,25,-10" Height="22" Content="Категория “C” " FontFamily="Jockey One" FontSize="18" Foreground="White" HorizontalAlignment="Center" Checked="c_category_button_Checked"/>
-            </Grid>
-            <Image Margin="0 0 60 -40" Width="350" Height="124" HorizontalAlignment="Right" Source="\Resources\car.png"/>
-        </Grid>
         <Grid VerticalAlignment="Top" Width="1080" Height="390">
-            <Label x:Name="CheckLabel" VerticalAlignment="Top" HorizontalAlignment="Left" Content=""/>
             <Grid HorizontalAlignment="Center" Width="240" Margin="0,10,0,186" RenderTransformOrigin="0.512,0.514">
-                <Image VerticalAlignment="Top" Height="208" Source="/resources/logo.png" Margin="-9,-14,-9,0"/>
+                <Image VerticalAlignment="Top" Height="208" Source="/images/logo.png" Margin="-9,-14,-9,0"/>
             </Grid>
-            <Grid HorizontalAlignment="Left" Width="232" Margin="246,178,0,72">
-                <Button HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="230" Height="61" Content="Экзамен" FontSize="40" Style="{DynamicResource ButtonStyleMainMenu}">
-                    
-                </Button>
-            </Grid>
-            <Grid HorizontalAlignment="Right" Width="232" Margin="0,248,248,72">
-                <Button HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="230" Height="61" Content="Зачет" FontSize="40" Style="{DynamicResource ButtonStyleMainMenu}"/>
-            </Grid>
-            <Button HorizontalAlignment="Right" VerticalAlignment="Top" Width="138" Height="61" Content="Правила" Click="Rules_Button_Click" FontSize="23" Style="{DynamicResource ButtonStyleMainMenu}" Margin="0,0,40,0"/>
+            <Button Content="Экзамен" Style="{DynamicResource ButtonStyleMainMenu}" Margin="0,0,612,72" Click="ButtonStart_Click"/>
+            <Button Content="Зачет"   Style="{DynamicResource ButtonStyleMainMenu}" Margin="0,0,225,72" Click="ButtonStart_Click"/>
 
-
+            <Button VerticalAlignment="Top" Width="138" Height="61" Content="Правила" Click="Rules_Button_Click" FontSize="23" Style="{DynamicResource ButtonStyleMainMenu}" Margin="0,10,24,0"/>
+        </Grid>
+        <Grid VerticalAlignment="Bottom" Width="1080" Height="340">
+            <Image Margin="20" HorizontalAlignment="Left" Width="399" Height="167" Source="/images/truck.png"/>
+            <Grid HorizontalAlignment="Center">
+                <Image HorizontalAlignment="Center" Width="233" Height="337" Source="\images\table.png"/>
+                <Button x:Name="checkButton_3" Background="Transparent" Style="{DynamicResource CheckButton}" Margin="34,50,0,265"  Content="Статистика" Click="RadioButton_Checked" Width="161" />
+                <Button x:Name="checkButton_1" Background="Transparent" Style="{DynamicResource CheckButton}" Margin="56,105,0,209" Content="Категория “B” " Click="RadioButton_Checked" Width="129"/>
+                <Button x:Name="checkButton_2" Background="Transparent" Style="{DynamicResource CheckButton}" Margin="40,159,0,155" Content="Категория “C” "  Click="RadioButton_Checked" Width="130"/>
+            </Grid>
+            <Image Margin="0 0 60 -40" Width="350" Height="124" HorizontalAlignment="Right" Source="\images\car.png"/>
         </Grid>
     </Grid>
 </Window>

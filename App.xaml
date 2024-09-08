@@ -6,7 +6,8 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Dictionary1.xaml" />
+                <ResourceDictionary Source="Dictonary/DictionaryMain.xaml" />
+                <ResourceDictionary Source="Dictonary/DictionaryRadioButton.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

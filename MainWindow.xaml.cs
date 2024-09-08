@@ -10,6 +10,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Effects;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -21,6 +22,9 @@ namespace Traffic_Laws
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        public string checkState = "";
+        public int modeStart;
         public MainWindow()
         {
             InitializeComponent();
@@ -28,61 +32,54 @@ namespace Traffic_Laws
 
         private void Rules_Button_Click(object sender, RoutedEventArgs e)
         {
-            Rules rules = new();
+			RulesWindow rules = new();
             rules.Show();
             this.Hide();
         }
 
-        private void RadioButton_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
-        {
-
-        }
-
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
         {
-            bool? isCheck1 = r1b.IsChecked;
-            if (isCheck1 == true)
-            {
+			Button? button = e.Source as Button;
 
-                RadioButton rb = e.Source as RadioButton;
-                rb.Foreground = Brushes.Green;
-            }
-        }
-
-        private void b_category_button_Checked(object sender, RoutedEventArgs e)
-        {
-            bool? isCheck1 = b_category_button.IsChecked;
-            bool? isCheck2 = c_category_button.IsChecked;
-            if(isCheck1 == true && isCheck2 == false)
+            if (button.Name == checkState)
             {
-                RadioButton rb = e.Source as RadioButton;
-                rb.Foreground = Brushes.Green;
-            }
+                checkState = "";
+				button.Background = new SolidColorBrush(Color.FromArgb(0, 0, 0, 0));
+			}
             else
             {
-                c_category_button.IsChecked = false;
-                RadioButton rb = e.Source as RadioButton;
-                rb.Foreground = Brushes.Green;
-            }
+				Button oldActiveButton = (Button)this.FindName(checkState);
+                if (oldActiveButton != null)
+                    oldActiveButton.Background = button.Background;
+                
+
+				button.Background = new SolidColorBrush(Color.FromArgb(85, 0, 0, 0));
+
+				checkState = button.Name;
+			}
+
         }
 
-        private void c_category_button_Checked(object sender, RoutedEventArgs e)
-        {
-            bool? isCheck1 = b_category_button.IsChecked;
-            bool? isCheck2 = c_category_button.IsChecked;
-            if (isCheck1 == false && isCheck2 == true)
-            {
-                RadioButton rb = e.Source as RadioButton;
-                rb.Foreground = Brushes.Green;
-            }
+		private void ButtonStart_Click(object sender, RoutedEventArgs e)
+		{
+			Button? button = e.Source as Button;
+
+            if (button.Content.ToString() == "Экзамен")
+                modeStart = 1;
             else
+                modeStart = 2;
+
+            if (checkState != "")
             {
-                b_category_button.IsChecked = false;
-                RadioButton rb = e.Source as RadioButton;
-                rb.Foreground = Brushes.Green;
-            }
-        }
-    }
+                int category = Convert.ToInt32(checkState.Split('_')[1]);
+                ExWindow exam = new(modeStart, category);
+				exam.Show();
+				this.Hide();
+			}
+
+            
+		}
+	}
 }
 
 // Для экзаменов берем tickets, рандомный билет из 40, смотреть на выбор категории

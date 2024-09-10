@@ -1393,6 +1393,7 @@
     <None Remove="images\signs\8_9.gif" />
     <None Remove="images\table.png" />
     <None Remove="images\truck.png" />
+    <None Remove="lol.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -1410,6 +1411,10 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.2739.15" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="lol.png" />
   </ItemGroup>
 
 </Project>

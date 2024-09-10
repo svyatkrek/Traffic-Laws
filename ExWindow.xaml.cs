@@ -99,15 +99,32 @@ namespace Traffic_Laws
 						.First();
 
 					service.QuestionsState[QuestionNumber].IsAnswer = true;
+
 					int answerNumber = Convert.ToInt32(selectedButton.Name.Split("_")[1]) - 1;
+					string answerTextBlockName = selectedButton.Name.Replace("Check", "Text");
+					TextBlock answerTextBlock = (TextBlock)this.FindName(answerTextBlockName);
 					Button paginatinButton = (Button)PaginationGrid.Children[QuestionNumber];
 					if (service.data[QuestionNumber].Answers[answerNumber].IsCorrect)
 					{
 						service.QuestionsState[QuestionNumber].IsAnswerCorrect = true;
 						paginatinButton.Foreground = Brushes.Green;
+						answerTextBlock.Foreground = Brushes.Green;
 					}
 					else
+					{
 						paginatinButton.Foreground = Brushes.Red;
+						answerTextBlock.Foreground = Brushes.Red;
+
+						for (int i = 0; i < service.data[QuestionNumber].Answers.Count; ++i)
+						{
+							if (service.data[QuestionNumber].Answers[i].IsCorrect)
+							{
+								string answerTextBlockCorrectName = "answerText_" + (i + 1).ToString();
+								TextBlock textBlock = (TextBlock)this.FindName(answerTextBlockCorrectName);
+								textBlock.Foreground = Brushes.Green;
+							}
+						}
+					}
 
 				}
 			}
@@ -192,6 +209,10 @@ namespace Traffic_Laws
 			answerText_3.Visibility = Visibility.Collapsed;
 			answerCheck_4.Visibility = Visibility.Collapsed;
 			answerText_4.Visibility = Visibility.Collapsed;
+			answerText_1.Foreground = Brushes.Black;
+			answerText_2.Foreground = Brushes.Black;
+			answerText_3.Foreground = Brushes.Black;
+			answerText_4.Foreground = Brushes.Black;
 
 		}
 

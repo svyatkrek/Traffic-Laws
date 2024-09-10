@@ -10,21 +10,21 @@
     <Grid>
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="350"/>
+                <ColumnDefinition Width="370"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Grid.Background>
                 <ImageBrush ImageSource="\images\mainImage.png"/>
             </Grid.Background>
-            <Button Width="100" Height="60" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20" FontSize="30" Content="Меню" Click="Menu_Button_Click" Style="{DynamicResource ButtonStyleMainMenu}" Foreground="White"/>
+            <Button Width="100" Height="60" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,20,0,0" FontSize="30" Content="Меню" Click="Menu_Button_Click" Style="{DynamicResource ButtonStyleMainMenu}" Foreground="White"/>
             <Grid Grid.Column="1">
                 <Label x:Name="mainLabel" Content="Ваша статистика " Style="{DynamicResource labelFinal}" Margin="0,136,0,0" FontSize="45"/>
-                <Label x:Name="amountLabel" Content="Количество сданных " Style="{DynamicResource labelFinal}" Margin="0,229,0,0" />
+                <Label x:Name="amountLabel" Content="Количество пройденных " Style="{DynamicResource labelFinal}" Margin="0,229,0,0" />
                 <Label x:Name="amountUncorrectLabel" Content="Количество неправильных ответов: " Style="{DynamicResource labelFinal}" Margin="0,318,0,0" />
                 <Label x:Name="amountCorrectLabel" Content="Количество правильных ответов: " Style="{DynamicResource labelFinal}" Margin="0,273,0,0" />
                 <Label x:Name="timeLabel" Content="Лучшее время: " Style="{DynamicResource labelFinal}" Margin="0,357,0,0"  />
             </Grid>
-            <Image x:Name="imageFinal" HorizontalAlignment="Left" Height="322" Margin="20,140,0,0" VerticalAlignment="Top" Width="305"/>
+            <Image x:Name="imageFinal" HorizontalAlignment="Left" Height="322" Margin="20,140,0,0" VerticalAlignment="Top" Width="324" Source="/lol.png"/>
         </Grid>
     </Grid>
 </Window>

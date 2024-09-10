@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Traffic_Laws"
         mc:Ignorable="d"
-        Title="FinalWindow" Height="720" Width="1080" WindowStartupLocation="CenterScreen">
+        Closing="DataWindow_Closing"
+        Title="Traffic Laws" Height="720" Width="1080" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="450"/>
@@ -17,7 +18,7 @@
         <Button Width="100" Height="60" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20" FontSize="30" Content="Меню" Click="Menu_Button_Click" Style="{DynamicResource ButtonStyleMainMenu}" Foreground="White"/>
         <Grid Grid.Column="1">
             <Label x:Name="mainLabel" Content="Ваш " Style="{DynamicResource labelFinal}" Margin="0,136,0,0" FontSize="45"/>
-            <Label x:Name="amountLabel" Content="Количество вопросов: " Style="{DynamicResource labelFinal}" Margin="0,229,0,0" />
+            <Label x:Name="amountLabel" Content="Общее количество вопросов: " Style="{DynamicResource labelFinal}" Margin="0,229,0,0" />
             <Label x:Name="amountUncorrectLabel" Content="Количество неправильных ответов: " Style="{DynamicResource labelFinal}" Margin="0,318,0,0" />
             <Label x:Name="amountCorrectLabel" Content="Количество правильных ответов: " Style="{DynamicResource labelFinal}" Margin="0,273,0,0" />
             <Label x:Name="timeLabel" Content="Времени затрачено: " Style="{DynamicResource labelFinal}" Margin="0,357,0,0"  />

@@ -24,7 +24,28 @@ namespace Traffic_Laws
 			InitializeComponent();
 			Logs logs = new();
 
-			logs.Load(type);
+			if (type == 1)
+				amountLabel.Content += "экзаменов: ";
+			else
+				amountLabel.Content += "зачетов: ";
+			if ( logs.Load(type) )
+			{
+				amountLabel.Content += logs.AmountAttempts;
+				amountUncorrectLabel.Content += logs.AmountUncorrect;
+				amountCorrectLabel.Content += logs.AmountCorrect;
+				timeLabel.Content += logs.BestTime;
+			}
+			else
+			{
+				mainLabel.Content = "Нет информации :c";
+				amountLabel.Content = string.Empty;
+				amountUncorrectLabel.Content = string.Empty;
+				amountCorrectLabel.Content = string.Empty;
+				timeLabel.Content = string.Empty;
+			}
+
+
+			
 
 		}
 
@@ -33,6 +54,11 @@ namespace Traffic_Laws
 			MainWindow menu = new();
 			menu.Show();
 			this.Hide();
+		}
+
+		private void DataWindow_Closing(object sender, EventArgs e)
+		{
+			Application.Current.Shutdown();
 		}
 	}
 }

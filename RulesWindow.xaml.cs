@@ -30,5 +30,10 @@ namespace Traffic_Laws
             menu.Show();
             this.Hide();
         }
-    }
+
+		private void DataWindow_Closing(object sender, EventArgs e)
+		{
+			Application.Current.Shutdown();
+		}
+	}
 }

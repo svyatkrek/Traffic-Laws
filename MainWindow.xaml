@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Traffic_Laws"
         mc:Ignorable="d"
-        Title="MainWindow" Height="720" Width="1080" WindowStartupLocation="CenterScreen">
+        Closing="DataWindow_Closing"
+        Title="Traffic Laws" Height="720" Width="1080" WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
         <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>

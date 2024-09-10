@@ -1,8 +1,11 @@
 ﻿using Accessibility;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
+using System.Resources;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -104,10 +107,45 @@ namespace Traffic_Laws
 			else
 			{
 				string pathToFolder = Path.Combine(path, typeFolderNameTest);
-				string fileName = Directory.GetFiles(pathToFolder)[number + 1];
+
+				string fileName = GetAllFilesToPath(pathToFolder)[number - 1];
 				return fileName;
 			}
 			
 		}
+
+		private static List<string> GetAllFilesToPath(string folderPath)
+		{
+
+			folderPath = folderPath.Replace("\\", "/");
+
+			List<string> filesList = new();
+
+			Assembly assembly = Assembly.GetExecutingAssembly();
+
+			string resourceName = assembly.GetName().Name + ".g.resources";
+
+			using (Stream stream = assembly.GetManifestResourceStream(resourceName))
+			{
+				if (stream != null)
+				{
+					using ResourceReader reader = new(stream);
+					foreach (DictionaryEntry entry in reader)
+					{
+						string resourceKey = (string)entry.Key;
+
+						// Если ресурс находится в нужной папке
+						if (resourceKey.StartsWith(folderPath, StringComparison.OrdinalIgnoreCase))
+						{
+							filesList.Add(resourceKey);
+						}
+					}
+				}
+			}
+
+			return filesList;
+
+		}
+
 	}
 }

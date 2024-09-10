@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Traffic_Laws"
         mc:Ignorable="d"
-        Title="ExWindow" Height="720" Width="1080" WindowStartupLocation="CenterScreen">
+        Closing="DataWindow_Closing"
+        Title="Traffic Laws" Height="720" Width="1080" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="\images\mainImage.png"/>

@@ -13,5 +13,6 @@ namespace Traffic_Laws
     /// </summary>
     public partial class App : Application
     {
-    }
+		
+	}
 }

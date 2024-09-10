@@ -72,12 +72,26 @@ namespace Traffic_Laws
             if (checkState != "")
             {
                 int category = Convert.ToInt32(checkState.Split('_')[1]);
-                ExWindow exam = new(modeStart, category);
-				exam.Show();
-				this.Hide();
+                if (category != 3)
+                {
+					ExWindow exam = new(modeStart, category);
+					exam.Show();
+					this.Hide();
+				}
+                else
+                {
+                    StatisticsWindow statisticsWindow = new(modeStart);
+                    statisticsWindow.Show();
+                    this.Hide();
+                }
+                
 			}
 
-            
+		}
+
+		private void DataWindow_Closing(object sender, EventArgs e)
+		{
+			Application.Current.Shutdown();
 		}
 	}
 }

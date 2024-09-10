@@ -51,3 +51,15 @@ C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\RulesWindow.
 C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\RulesWindow.baml
 C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\FinalWindow.g.cs
 C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\FinalWindow.baml
+C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\StatisticsWindow.g.cs
+C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\StatisticsWindow.baml
+C:\Users\Mark\Desktop\project\Traffic-Laws\bin\Debug\net7.0-windows\runtimes\win-x86\native\WebView2Loader.dll
+C:\Users\Mark\Desktop\project\Traffic-Laws\bin\Debug\net7.0-windows\runtimes\win-x64\native\WebView2Loader.dll
+C:\Users\Mark\Desktop\project\Traffic-Laws\bin\Debug\net7.0-windows\runtimes\win-arm64\native\WebView2Loader.dll
+C:\Users\Mark\Desktop\project\Traffic-Laws\bin\Debug\net7.0-windows\Microsoft.Web.WebView2.Core.xml
+C:\Users\Mark\Desktop\project\Traffic-Laws\bin\Debug\net7.0-windows\Microsoft.Web.WebView2.Wpf.xml
+C:\Users\Mark\Desktop\project\Traffic-Laws\bin\Debug\net7.0-windows\Microsoft.Web.WebView2.WinForms.xml
+C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Traffic Laws.csproj.AssemblyReference.cache
+C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Traffic Laws_Content.g.cs
+C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Traffic .C443D577.Up2Date
+C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Traffic Laws.csproj.Fody.CopyLocal.cache

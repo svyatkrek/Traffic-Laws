@@ -23,20 +23,27 @@ namespace Traffic_Laws
 		{
 			InitializeComponent();
 			string time = String.Concat((_time / 60).ToString(), " минут ", (_time - (_time / 60 * 60)).ToString(), " секунд");
+			timeLabel.Content += time;
 			if (type == 1)
 			{
 				mainLabel.Content += "Экзамен";
 				if (amountAnswer - amountCorrectAnswer <= 1)
 					imageFinal.Source = new BitmapImage(new Uri("images/passed.png", UriKind.Relative));
 				else
-					imageFinal.Source = new BitmapImage(new Uri("images/unpassed.png", UriKind.Relative));
+				{
+					imageFinal.Source = new BitmapImage(new Uri("images/unpassed.jpg", UriKind.Relative));
+					_time = Int32.MaxValue;
+				}
 			}
 			else
 			{
 				if (amountAnswer - amountCorrectAnswer <= 1)
-					imageFinal.Source = new BitmapImage(new Uri("images/passed2.png", UriKind.Relative));
+					imageFinal.Source = new BitmapImage(new Uri("images/passed2.jpg", UriKind.Relative));
 				else
+				{
 					imageFinal.Source = new BitmapImage(new Uri("images/unpassed2.png", UriKind.Relative));
+					_time = Int32.MaxValue;
+				}
 				mainLabel.Content += "Зачет";
 			}
 
@@ -45,7 +52,7 @@ namespace Traffic_Laws
 			amountLabel.Content += amountAnswer.ToString();
 			amountUncorrectLabel.Content += amountUncorrectAnswer.ToString();
 			amountCorrectLabel.Content += amountCorrectAnswer.ToString();
-			timeLabel.Content += time;
+				
 
 			Logs logs = new();
 			logs.Save(type, amountCorrectAnswer.ToString(), amountUncorrectAnswer.ToString(), _time.ToString());
@@ -56,6 +63,11 @@ namespace Traffic_Laws
 			MainWindow menu = new();
 			menu.Show();
 			this.Hide();
+		}
+
+		private void DataWindow_Closing(object sender, EventArgs e)
+		{
+			Application.Current.Shutdown();
 		}
 	}
 }

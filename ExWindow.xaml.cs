@@ -179,6 +179,8 @@ namespace Traffic_Laws
 
 			if (QuestionNumber == AmountQuestion - 1)
 				button_next.Content = "Закончить";
+			else
+				button_next.Content = "Далее";
 			
 		}
 
@@ -193,6 +195,9 @@ namespace Traffic_Laws
 
 		}
 
-
+		private void DataWindow_Closing(object sender, EventArgs e)
+		{
+			Application.Current.Shutdown();
+		}
 	}
 }

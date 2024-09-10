@@ -24,7 +24,7 @@
                 <Label x:Name="amountCorrectLabel" Content="Количество правильных ответов: " Style="{DynamicResource labelFinal}" Margin="0,273,0,0" />
                 <Label x:Name="timeLabel" Content="Лучшее время: " Style="{DynamicResource labelFinal}" Margin="0,357,0,0"  />
             </Grid>
-            <Image x:Name="imageFinal" HorizontalAlignment="Left" Height="322" Margin="20,140,0,0" VerticalAlignment="Top" Width="324" Source="/lol.png"/>
+            <Image x:Name="imageFinal" HorizontalAlignment="Left" Height="322" Margin="20,140,0,0" VerticalAlignment="Top" Width="324" Source="images/lol.png"/>
         </Grid>
     </Grid>
 </Window>

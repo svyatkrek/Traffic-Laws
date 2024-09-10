@@ -23,7 +23,7 @@ namespace Traffic_Laws
     public partial class MainWindow : Window
     {
 
-        public string checkState = "";
+        public string checkState = string.Empty;
         public int modeStart;
         public MainWindow()
         {
@@ -43,7 +43,7 @@ namespace Traffic_Laws
 
             if (button.Name == checkState)
             {
-                checkState = "";
+                checkState = string.Empty;
 				button.Background = new SolidColorBrush(Color.FromArgb(0, 0, 0, 0));
 			}
             else
@@ -57,7 +57,6 @@ namespace Traffic_Laws
 
 				checkState = button.Name;
 			}
-
         }
 
 		private void ButtonStart_Click(object sender, RoutedEventArgs e)
@@ -69,7 +68,7 @@ namespace Traffic_Laws
             else
                 modeStart = 2;
 
-            if (checkState != "")
+            if (checkState != string.Empty)
             {
                 int category = Convert.ToInt32(checkState.Split('_')[1]);
                 if (category != 3)
@@ -86,7 +85,6 @@ namespace Traffic_Laws
                 }
                 
 			}
-
 		}
 
 		private void DataWindow_Closing(object sender, EventArgs e)

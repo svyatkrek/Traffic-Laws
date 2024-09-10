@@ -10,7 +10,6 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Media.TextFormatting;
 using Traffic_Laws.Entity;
 
 namespace Traffic_Laws
@@ -75,7 +74,6 @@ namespace Traffic_Laws
 					int randomIndex = GetRandomNumber(0, count - 1 - i);
 					data.RemoveAt(randomIndex);
 				}
-			Console.WriteLine(data.Count);
 		}
 
 

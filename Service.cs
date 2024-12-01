@@ -47,7 +47,6 @@ namespace Traffic_Laws
 				QuestionState tmp = new();
 				QuestionsState.Add(tmp);
 			}
-
 		}
 
 		private void InitDataExamCategory(int type, string categoryFolderName)
@@ -75,7 +74,6 @@ namespace Traffic_Laws
 					data.RemoveAt(randomIndex);
 				}
 		}
-
 
 		private static int GetRandomNumber(int first, int last)
 		{
@@ -142,7 +140,6 @@ namespace Traffic_Laws
 			}
 
 			return filesList;
-
 		}
 
 	}

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -28,9 +29,34 @@ namespace Traffic_Laws
         public MainWindow()
         {
             InitializeComponent();
-        }
+            LaunchingDynamicElements();
 
-        private void Rules_Button_Click(object sender, RoutedEventArgs e)
+		}
+
+        private async void LaunchingDynamicElements()
+        {
+			Image img = (Image)this.FindName("dynamicImage");
+            int position = -950;
+            int angle = 0;
+			RotateTransform rotateTransform = new();
+			while (true)
+            {
+                position += 5;
+                angle += 5;
+                if (angle > 360)
+                    angle -= 360;
+                if (position > 2000)
+                    position -= 2200;
+				img.Margin = new Thickness(position, 0, 0, 10);
+                //TransformGroup transformGroup = new();
+                rotateTransform.Angle = angle;
+                img.RenderTransform = rotateTransform;
+				await Task.Run(() => Thread.Sleep(50));
+			}
+		}
+
+
+		private void Rules_Button_Click(object sender, RoutedEventArgs e)
         {
 			RulesWindow rules = new();
             rules.Show();

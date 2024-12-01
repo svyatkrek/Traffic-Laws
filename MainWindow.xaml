@@ -6,44 +6,84 @@
         xmlns:local="clr-namespace:Traffic_Laws"
         mc:Ignorable="d"
         Closing="DataWindow_Closing"
-        Title="Traffic Laws" Height="720" Width="1080" WindowStartupLocation="CenterScreen">
-    <Window.Resources>
-        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
-        <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
-        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
-        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
-        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
-        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
-        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
-        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
-        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
-    </Window.Resources>
+        Title="Traffic Laws" Height="770" Width="1080" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    
     <Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="\images\mainImage.png"/>
-        </Grid.Background>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="720"/>
         </Grid.RowDefinitions>
-        <Grid VerticalAlignment="Top" Width="1080" Height="390">
-            <Grid HorizontalAlignment="Center" Width="240" Margin="0,10,0,186" RenderTransformOrigin="0.512,0.514">
-                <Image VerticalAlignment="Top" Height="208" Source="/images/logo.png" Margin="-9,-14,-9,0"/>
+        <Grid x:Name="header" Grid.Row="0" Background="#FF28345D">
+            <Grid x:Name="dragHeader" HorizontalAlignment="Left" Width="985">
+                <Image Source="/images/logo.png" HorizontalAlignment="Left" Margin="0,6,0,6" />
+                <Label Content="ПРАВИЛА ДОРОЖНОГО ДВИЖЕНИЯ РЕСПУБЛИКИ БЕЛАРУСЬ" HorizontalAlignment="Left" Margin="80,0,0,0" VerticalAlignment="Center" FontSize="24"  Foreground="White" FontFamily="Alumni Sans"/>
             </Grid>
-            <Button Content="Экзамен" Style="{DynamicResource ButtonStyleMainMenu}" Margin="0,0,612,72" Click="ButtonStart_Click"/>
-            <Button Content="Зачет"   Style="{DynamicResource ButtonStyleMainMenu}" Margin="0,0,225,72" Click="ButtonStart_Click"/>
-
-            <Button VerticalAlignment="Top" Width="138" Height="61" Content="Правила" Click="Rules_Button_Click" FontSize="23" Style="{DynamicResource ButtonStyleMainMenu}" Margin="0,10,24,0"/>
+            <Button x:Name="exitButton" HorizontalAlignment="Right" Width="25" Height="25" Margin="0,0,20,0" BorderBrush="{x:Null}">
+                <Button.Background>
+                    <ImageBrush ImageSource="/images/closeButton.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="hideButton" HorizontalAlignment="Right" Margin="0,0,65,0" Width="25" Height="5">
+                <Button.Background>
+                    <ImageBrush ImageSource="/images/hideButton.png"/>
+                </Button.Background>
+            </Button>
         </Grid>
-        <Grid VerticalAlignment="Bottom" Width="1080" Height="340">
-            <Image Margin="20" HorizontalAlignment="Left" Width="399" Height="167" Source="/images/truck.png"/>
-            <Grid HorizontalAlignment="Center">
-                <Image HorizontalAlignment="Center" Width="233" Height="337" Source="\images\table.png"/>
-                <Button x:Name="checkButton_3" Background="Transparent" Style="{DynamicResource CheckButton}" Margin="34,50,0,265"  Content="Статистика" Click="RadioButton_Checked" Width="161" />
-                <Button x:Name="checkButton_1" Background="Transparent" Style="{DynamicResource CheckButton}" Margin="56,105,0,209" Content="Категория “B” " Click="RadioButton_Checked" Width="129"/>
-                <Button x:Name="checkButton_2" Background="Transparent" Style="{DynamicResource CheckButton}" Margin="40,159,0,155" Content="Категория “C” "  Click="RadioButton_Checked" Width="130"/>
+        <Grid Grid.Row="1" >
+            <Grid.Background>
+                <ImageBrush ImageSource="/images/background.png"/>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150"/>
+                <RowDefinition Height="250"/>
+                <RowDefinition Height="320"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" HorizontalAlignment="Left" Width="1080" >
+                <Grid Margin="0,0,0,0">
+                    <Image x:Name="dynamicImage" Source="/images/wheel.png" HorizontalAlignment="Left" Width="100" Height="100" Margin="20,25,0,25"/>
+                    <Label Content="ПРОВЕРЬ СВОИ&#10;ЗНАНИЯ!" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="40"  Foreground="White" FontFamily="Alumni Sans" Width="320" Height="112" Margin="136,28,0,0" FontWeight="Bold">
+                        <Label.Effect>
+                            <DropShadowEffect  Color="Black" Direction="270" BlurRadius="10" Opacity="0.45"/>
+                        </Label.Effect>
+                    </Label>
+                </Grid>
+                <Button Width="175" Height="50" Content="ПРАВИЛА" Click="Rules_Button_Click" FontSize="30" Style="{DynamicResource ButtonStyleMainMenu}" Margin="0,0,60,60"/>
             </Grid>
-            <Image Margin="0 0 60 -40" Width="350" Height="124" HorizontalAlignment="Right" Source="\images\car.png"/>
+            <Grid Grid.Row="1" HorizontalAlignment="Left" Width="1080">
+                <Grid Width="600" Height="100" VerticalAlignment="Top" Margin="0,20,0,0" >
+                    <Button Content="ЭКЗАМЕН" Style="{DynamicResource ButtonStyleMainMenu}" FontSize="40" Click="ButtonStart_Click" HorizontalAlignment="Left" Margin="20,0,0,0" VerticalAlignment="Center" Width="240" Height="55" />
+                    <Button Content="ЗАЧЕТ"   Style="{DynamicResource ButtonStyleMainMenu}" FontSize="40" Click="ButtonStart_Click" Margin="0,0,20,0" HorizontalAlignment="Right" VerticalAlignment="Center" Width="240" Height="55" />
+                </Grid>
+                <Grid Width="600" Height="100" VerticalAlignment="Bottom" Margin="0,0,0,20" >
+                    <Button Content="ФАКТЫ" Style="{DynamicResource ButtonStyleMainMenu}" FontSize="40" Click="ButtonStart_Click" HorizontalAlignment="Left" Margin="20,0,0,0" VerticalAlignment="Center" Width="240" Height="55" />
+                    <Button Content="ВИДЕО"   Style="{DynamicResource ButtonStyleMainMenu}" FontSize="40" Click="ButtonStart_Click" Margin="0,0,20,0" HorizontalAlignment="Right" VerticalAlignment="Center" Width="240" Height="55" FontFamily="Alumni Sans"/>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="2">
+                <Grid HorizontalAlignment="Center" Width="102" Height="325" >
+                    <Grid.Background>
+                        <ImageBrush ImageSource="/images/roadSign.png"/>
+                    </Grid.Background>
+                    <Canvas>
+                        <Button x:Name="checkButton_3" Style="{DynamicResource CheckButton}" Content="СТАТИСТИКА" Click="RadioButton_Checked" Width="204" Height="47" Canvas.Left="-51" Canvas.Top="115" HorizontalAlignment="Center" VerticalAlignment="Top"  >
+                            <Button.Background>
+                                <ImageBrush ImageSource="/statisticsButton.png"/>
+                            </Button.Background>
+                        </Button>
+
+                        <Button x:Name="checkButton_1" Style="{DynamicResource CheckButton}" Content="КАТЕГОРИЯ “B” " Click="RadioButton_Checked" Width="285" Height="55" Canvas.Left="-51" Canvas.Top="170" HorizontalAlignment="Center" VerticalAlignment="Top">
+                            <Button.Background>
+                                <ImageBrush ImageSource="/rightArrow.png"/>
+                            </Button.Background>
+                        </Button>
+                        <Button x:Name="checkButton_2" Style="{DynamicResource CheckButton}" Content="КАТЕГОРИЯ “C” "  Click="RadioButton_Checked" Width="285" Height="55" Canvas.Left="-132" Canvas.Top="230" HorizontalAlignment="Center" VerticalAlignment="Top">
+                            <Button.Background>
+                                <ImageBrush ImageSource="/leftArrow.png"/>
+                            </Button.Background>
+                        </Button>
+                    </Canvas>
+                </Grid>
+            </Grid>
         </Grid>
     </Grid>
 </Window>

@@ -12,7 +12,11 @@
 
   <ItemGroup>
 
-    <None Remove="images\car.png" />
+    <None Remove="background.png" />
+
+    <None Remove="closeButton.png" />
+
+    <None Remove="hideButton.png" />
 
     <None Remove="images\C_D\00e6163d7c717e7b2b3bcc83fafcb820.jpg" />
 
@@ -1091,8 +1095,6 @@
     <None Remove="images\C_D\fee46fa4a045ffdb254de1872be2ab51.jpg" />
 
     <None Remove="images\C_D\feeebab9558f9155dea1b1da34ad5786.jpg" />
-    <None Remove="images\logo.png" />
-    <None Remove="images\mainImage.png" />
     <None Remove="images\signs\1_1.svg" />
     <None Remove="images\signs\1_10.svg" />
     <None Remove="images\signs\1_11_1.svg" />
@@ -1391,9 +1393,14 @@
     <None Remove="images\signs\8_7.gif" />
     <None Remove="images\signs\8_8.gif" />
     <None Remove="images\signs\8_9.gif" />
-    <None Remove="images\table.png" />
-    <None Remove="images\truck.png" />
-    <None Remove="lol.png" />
+    <None Remove="leftArrow.png" />
+    <None Remove="logo.png" />
+    <None Remove="Resources\Fonts\AlumniSans-Medium.ttf" />
+    <None Remove="Resources\Fonts\AlumniSans-Regular.ttf" />
+    <None Remove="rightArrow.png" />
+    <None Remove="roadSign.png" />
+    <None Remove="statisticsButton.png" />
+    <None Remove="wheel.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -1414,7 +1421,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="lol.png" />
+    <Resource Include="leftArrow.png" />
+    <Resource Include="Resources\Fonts\AlumniSans-Medium.ttf" />
+    <Resource Include="Resources\Fonts\AlumniSans-Regular.ttf" />
+    <Resource Include="rightArrow.png" />
+    <Resource Include="statisticsButton.png" />
   </ItemGroup>
 
 </Project>

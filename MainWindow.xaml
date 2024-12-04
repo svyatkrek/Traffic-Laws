@@ -17,12 +17,12 @@
                 <Image Source="/images/logo.png" HorizontalAlignment="Left" Margin="0,6,0,6" />
                 <Label Content="ПРАВИЛА ДОРОЖНОГО ДВИЖЕНИЯ РЕСПУБЛИКИ БЕЛАРУСЬ" HorizontalAlignment="Left" Margin="80,0,0,0" VerticalAlignment="Center" FontSize="24"  Foreground="White" FontFamily="Alumni Sans" Width="895"/>
             </Grid>
-            <Button x:Name="exitButton" HorizontalAlignment="Right" Width="25" Height="25" Margin="0,0,20,0" BorderBrush="{x:Null}" Click="DataWindow_Closing">
+            <Button x:Name="exitButton" HorizontalAlignment="Right" Width="25" Height="25" Margin="0,0,20,0" BorderBrush="{x:Null}" Click="DataWindow_Closing" Style="{DynamicResource HeaderButton}">
                 <Button.Background>
                     <ImageBrush ImageSource="/images/closeButton.png"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="hideButton" HorizontalAlignment="Right" Margin="0,0,65,0" Width="25" Height="5" Click="HideButton_Click">
+            <Button x:Name="hideButton" HorizontalAlignment="Right" Margin="0,0,65,0" Width="25" Height="5" Click="HideButton_Click" Style="{DynamicResource HeaderButton}">
                 <Button.Background>
                     <ImageBrush ImageSource="/images/hideButton.png"/>
                 </Button.Background>

@@ -17,22 +17,22 @@
                 <Image Source="/images/logo.png" HorizontalAlignment="Left" Margin="0,6,0,6" />
                 <Label Content="ПРАВИЛА ДОРОЖНОГО ДВИЖЕНИЯ РЕСПУБЛИКИ БЕЛАРУСЬ" HorizontalAlignment="Left" Margin="80,0,0,0" VerticalAlignment="Center" FontSize="24"  Foreground="White" FontFamily="Alumni Sans" Width="895"/>
             </Grid>
-            <Button x:Name="exitButton" HorizontalAlignment="Right" Width="25" Height="25" Margin="0,0,20,0" BorderBrush="{x:Null}" Click="DataWindow_Closing">
+            <Button x:Name="exitButton" Style="{DynamicResource HeaderButton}" HorizontalAlignment="Right" Width="25" Height="25" Margin="0,0,20,0" BorderBrush="{x:Null}" Click="DataWindow_Closing">
                 <Button.Background>
                     <ImageBrush ImageSource="/images/closeButton.png"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="hideButton" HorizontalAlignment="Right" Margin="0,0,65,0" Width="25" Height="5" Click="HideButton_Click">
+            <Button x:Name="hideButton" Style="{DynamicResource HeaderButton}" HorizontalAlignment="Right" Margin="0,0,65,0" Width="25" Height="5" Click="HideButton_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="/images/hideButton.png"/>
                 </Button.Background>
             </Button>
         </Grid>
-        <Grid Grid.Row="1">
+        <Grid Grid.Row="1" Background="#FFE3E6FF">
             <Grid.RowDefinitions>
                 <RowDefinition Height="90"/>
                 <RowDefinition/>
-                <RowDefinition Height="150"/>
+                <RowDefinition Height="100"/>
             </Grid.RowDefinitions>
             <Grid Grid.Row="0">
                 <Grid.Background>
@@ -52,17 +52,51 @@
                     </LinearGradientBrush>
                 </Grid.Background>
                 <Button  Content="Завершить экзамен" FontSize="30" Style="{DynamicResource ButtonStyleMainMenu}" HorizontalAlignment="Left" Margin="20,0,0,0" VerticalAlignment="Center" Click="ButtonResult_Click" Width="240" Height="55" />
-                <StackPanel x:Name="PaginationGrid" Margin="284,18,141,-32" Orientation="Horizontal" >
+                <StackPanel x:Name="PaginationGrid" Margin="265,18,140,-32" Orientation="Horizontal" >
                 </StackPanel>
                 <Label x:Name="labelTime" Background="#E3E6FF" Style="{DynamicResource labelTime}" Width="100"  Margin="0,0,20,0" Height="55"/>
             </Grid>
             <StackPanel Grid.Row="1">
-                <Grid>
-                    <TextBlock x:Name="questionLabel" TextWrapping="Wrap" FontSize="23" Margin="45,0,45,0"/>
+                <Grid Margin="0,40,0,0">
+                    <TextBlock x:Name="questionLabel" TextWrapping="Wrap" FontSize="25" Margin="45,0,45,0" Style="{DynamicResource TextBoxBase}"/>
                 </Grid>
 
-                <StackPanel Orientation="Horizontal">
-                    <Image x:Name="ImageQuestion" Margin="25,20,0, 200" HorizontalAlignment="Left" Width="480" />
+                <StackPanel Orientation="Horizontal" Height="460">
+                    <Border x:Name="imagePanel" Width="480" Height="350" CornerRadius="35">
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <LinearGradientBrush.RelativeTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                        <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                        <RotateTransform Angle="45" CenterX="0.5" CenterY="0.5"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </LinearGradientBrush.RelativeTransform>
+                                <GradientStop Color="#FF3953AE"/>
+                                <GradientStop Color="#FF28345D" Offset="1"/>
+                                <GradientStop Color="#FF32458B" Offset="0.361"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <Grid Width="480" Margin="-50,1,0,1">
+                            <Grid.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <LinearGradientBrush.RelativeTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                            <RotateTransform Angle="45" CenterX="0.5" CenterY="0.5"/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </LinearGradientBrush.RelativeTransform>
+                                    <GradientStop Color="#FF3953AE"/>
+                                    <GradientStop Color="#FF28345D" Offset="1"/>
+                                    <GradientStop Color="#FF32458B" Offset="0.361"/>
+                                </LinearGradientBrush>
+                            </Grid.Background>
+                            <Image x:Name="ImageQuestion"  HorizontalAlignment="Left" Width="416" Margin="60,78,0,78"/>
+                        </Grid>
+                    </Border>
                     <Grid Margin="20,15,0,0" Height="350">
                         <StackPanel x:Name="stackPanelChecked" Width="540" >
                             <Grid>
@@ -85,10 +119,10 @@
                     </Grid>
                 </StackPanel>
             </StackPanel>
-            <Grid Grid.Row="2">
-                <Button  Content="Ответить" x:Name="buttonAnswer" FontSize="36" Style="{DynamicResource ButtonStyleMainMenu}" HorizontalAlignment="Left" Margin="407,0,0,0" VerticalAlignment="Center" Click="ButtonAnswer_Click" />
-                <Button  Content="Далее" x:Name="button_next" FontSize="36" Style="{DynamicResource ButtonStyleMainMenu}" HorizontalAlignment="Left" Margin="713,0,0,0" VerticalAlignment="Center" Click="PaginationButtonMain_Click" />
-                <Button  Content="Назад" x:Name="button_last" FontSize="36" Style="{DynamicResource ButtonStyleMainMenu}" HorizontalAlignment="Left" Margin="114,0,0,0" VerticalAlignment="Center" Click="PaginationButtonMain_Click"/>
+            <Grid Grid.Row="2" Margin="270,10,210,0">
+                <Button  Content="Ответить" x:Name="buttonAnswer" Style="{DynamicResource ButtonStyleExamMenu}" Margin="200,0,0,0" Click="ButtonAnswer_Click" VerticalAlignment="Top" />
+                <Button  Content="Далее" x:Name="button_next" Style="{DynamicResource ButtonStyleExamMenu}"  Margin="400,0,0,0" Click="PaginationButtonMain_Click" VerticalAlignment="Top" />
+                <Button  Content="Назад" x:Name="button_last" Style="{DynamicResource ButtonStyleExamMenu}"  Margin="0,0,0,0" Click="PaginationButtonMain_Click" VerticalAlignment="Top"/>
             </Grid>
         </Grid>
     </Grid>

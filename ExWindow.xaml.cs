@@ -16,11 +16,10 @@ namespace Traffic_Laws
     /// </summary>
     public partial class ExWindow : Window
     {
-		private static ExWindow? DragWindow;
 		private readonly Service service = new();
 		private readonly string type;
         private int QuestionNumber;
-        private DispatcherTimer timer;
+        private DispatcherTimer? timer;
 		private int time = 0;
 		private int AmountQuestion;
 
@@ -36,7 +35,6 @@ namespace Traffic_Laws
 			DrawPagination();
 			DrawQuestion();
 			TimerStart();
-			DragWindow = this;
 
 		}
 
@@ -65,13 +63,16 @@ namespace Traffic_Laws
 			{
 				Button button = new()
 				{
-					Width = wight,
-					Height = 40,
+					Width = 45,
+					Height = 70,
+					FontSize = 34,
+					FontWeight = FontWeights.Bold,
 					HorizontalAlignment = HorizontalAlignment.Left,
 					VerticalAlignment = VerticalAlignment.Top,
 					Content = i + 1,
+					Margin =  new Thickness(20,0,0,0),
 					Name = String.Concat("pagination_", i.ToString()),
-					Background = new SolidColorBrush(Color.FromRgb(93, 86, 86)),
+					Background = new SolidColorBrush(Color.FromRgb(163, 184, 217)),
 					Foreground = Brushes.White,
 				};
 				button.Click += new RoutedEventHandler(PaginationButton_Click);
@@ -83,7 +84,7 @@ namespace Traffic_Laws
 		{
 			Button? paginationButton = e.Source as Button;
 			Button? paginationButtonOld = (Button)PaginationGrid.Children[QuestionNumber];
-			paginationButtonOld.Background = new SolidColorBrush(Color.FromRgb(93, 86, 86));
+			paginationButtonOld.Background = new SolidColorBrush(Color.FromRgb(163, 184, 217));
 			QuestionNumber = Convert.ToInt32(paginationButton.Name.Split('_')[1]);
 			DrawQuestion();
 		}
@@ -142,7 +143,7 @@ namespace Traffic_Laws
 			{
 				Button? paginationButton = e.Source as Button;
 				Button? paginationButtonOld = (Button)PaginationGrid.Children[QuestionNumber];
-				paginationButtonOld.Background = new SolidColorBrush(Color.FromRgb(93, 86, 86));
+				paginationButtonOld.Background = new SolidColorBrush(Color.FromRgb(163, 184, 217));
 				if (paginationButton.Name == "button_next")
 					QuestionNumber += 1;
 				else
@@ -179,11 +180,16 @@ namespace Traffic_Laws
 			questionLabel.Text = service.data[QuestionNumber].QuestionText;
 			string imageURL = service.data[QuestionNumber].ImageURL.Replace("./", "");
 			if (imageURL.Contains("no_image"))
-				ImageQuestion.Visibility = Visibility.Collapsed;
+			{
+				imagePanel.Visibility = Visibility.Collapsed;
+				stackPanelChecked.Width = 900;
+			}
+
 			else
 			{
-				ImageQuestion.Visibility = Visibility.Visible;
+				imagePanel.Visibility = Visibility.Visible;
 				ImageQuestion.Source = new BitmapImage(new Uri(imageURL, UriKind.Relative));
+				stackPanelChecked.Width = 480;
 			}
 			List<Answer> answers = service.data[QuestionNumber].Answers;
 
@@ -198,7 +204,7 @@ namespace Traffic_Laws
                 radioButton.Visibility = Visibility.Visible;
 			}
 			Button paginatinButton = (Button)PaginationGrid.Children[QuestionNumber];
-			paginatinButton.Background = new SolidColorBrush(Color.FromRgb(47, 45, 45));
+			paginatinButton.Background = new SolidColorBrush(Color.FromRgb(84, 137, 217));
 
 			if (QuestionNumber == AmountQuestion - 1)
 				button_next.Content = "Закончить";
@@ -236,7 +242,7 @@ namespace Traffic_Laws
 		{
 			if (Mouse.LeftButton == MouseButtonState.Pressed)
 			{
-				ExWindow.DragWindow.DragMove();
+				this.DragMove();
 			}
 		}
 	}

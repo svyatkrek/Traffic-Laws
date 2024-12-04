@@ -6,23 +6,71 @@
         xmlns:local="clr-namespace:Traffic_Laws"
         mc:Ignorable="d"
         Closing="DataWindow_Closing"
-        Title="Traffic Laws" Height="720" Width="1080" WindowStartupLocation="CenterScreen">
+        Title="Traffic Laws" Height="770" Width="1080" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="450"/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Grid.Background>
-            <ImageBrush ImageSource="\images\mainImage.png"/>
-        </Grid.Background>
-        <Button Width="100" Height="60" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20" FontSize="30" Content="Меню" Click="Menu_Button_Click" Style="{DynamicResource ButtonStyleMainMenu}" Foreground="White"/>
-        <Grid Grid.Column="1">
-            <Label x:Name="mainLabel" Content="Ваш " Style="{DynamicResource labelFinal}" Margin="0,136,0,0" FontSize="45"/>
-            <Label x:Name="amountLabel" Content="Общее количество вопросов: " Style="{DynamicResource labelFinal}" Margin="0,229,0,0" />
-            <Label x:Name="amountUncorrectLabel" Content="Количество неправильных ответов: " Style="{DynamicResource labelFinal}" Margin="0,318,0,0" />
-            <Label x:Name="amountCorrectLabel" Content="Количество правильных ответов: " Style="{DynamicResource labelFinal}" Margin="0,273,0,0" />
-            <Label x:Name="timeLabel" Content="Времени затрачено: " Style="{DynamicResource labelFinal}" Margin="0,357,0,0"  />
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid x:Name="header" Grid.Row="0" Background="#FF28345D">
+            <Grid MouseDown="Drag" x:Name="dragHeader" HorizontalAlignment="Left" Width="985">
+                <Image Source="/images/logo.png" HorizontalAlignment="Left" Margin="0,6,0,6" />
+                <Label Content="ПРАВИЛА ДОРОЖНОГО ДВИЖЕНИЯ РЕСПУБЛИКИ БЕЛАРУСЬ" HorizontalAlignment="Left" Margin="80,0,0,0" VerticalAlignment="Center" FontSize="24"  Foreground="White" FontFamily="Alumni Sans" Width="895"/>
+            </Grid>
+            <Button x:Name="exitButton" Style="{DynamicResource HeaderButton}" HorizontalAlignment="Right" Width="25" Height="25" Margin="0,0,20,0" BorderBrush="{x:Null}" Click="DataWindow_Closing">
+                <Button.Background>
+                    <ImageBrush ImageSource="/images/closeButton.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="hideButton" Style="{DynamicResource HeaderButton}" HorizontalAlignment="Right" Margin="0,0,65,0" Width="25" Height="5" Click="HideButton_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/images/hideButton.png"/>
+                </Button.Background>
+            </Button>
         </Grid>
-        <Image x:Name="imageFinal" HorizontalAlignment="Left" Height="322" Margin="70,147,0,0" VerticalAlignment="Top" Width="305"/>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform Angle="270" CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF3953AE" Offset="1"/>
+                        <GradientStop Color="#FF28345D"/>
+                        <GradientStop Color="#FF28345D" Offset="0.25"/>
+                        <GradientStop Color="#FF32458B" Offset="0.676"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+                <Button Width="170" Height="50" HorizontalAlignment="Left" Margin="30,0,0,0" FontSize="30" Content="Меню" Click="Menu_Button_Click" Style="{DynamicResource ButtonStyleMainMenu}" />
+                <Label x:Name="mainLabel" Content="Ваш " Style="{DynamicResource labelFinal}"  FontSize="45" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontWeight="Bold"/>
+            </Grid>
+            <Grid Grid.Row="1" Background="#FFE3E6FF">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="650"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+
+                <Grid Grid.Column="0" Grid.RowSpan="2" Margin="40,0,0,0">
+                    <Label x:Name="amountLabel" Content="Количество вопросов: " Style="{DynamicResource labelFinal}" Margin="0,200,0,0" />
+                    <Label x:Name="amountUncorrectLabel" Content="Количество неправильных ответов: " Style="{DynamicResource labelFinal}" Margin="0,320,0,0" />
+                    <Label x:Name="amountCorrectLabel" Content="Количество правильных ответов: " Style="{DynamicResource labelFinal}" Margin="0,260,0,0" />
+                    <Label x:Name="timeLabel" Content="Потрачено времени: " Style="{DynamicResource labelFinal}" Margin="0,380,0,0"  />
+                </Grid>
+                <Grid Grid.Column="1">
+                    <Image x:Name="imageFinal" HorizontalAlignment="Left" Height="322" Margin="70,125,0,0" VerticalAlignment="Top" Width="305"/>
+                </Grid>
+            </Grid>
+            
+        </Grid>
     </Grid>
 </Window>

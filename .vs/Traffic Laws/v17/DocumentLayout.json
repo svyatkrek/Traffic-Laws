@@ -3,44 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Mark\\Desktop\\project\\Traffic-Laws\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F2564D66-FFBD-4887-B2B5-030A9C994A75}|Traffic Laws.csproj|c:\\users\\mark\\desktop\\project\\traffic-laws\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2564D66-FFBD-4887-B2B5-030A9C994A75}|Traffic Laws.csproj|solutionrelative:service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F2564D66-FFBD-4887-B2B5-030A9C994A75}|Traffic Laws.csproj|c:\\users\\mark\\desktop\\project\\traffic-laws\\exwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2564D66-FFBD-4887-B2B5-030A9C994A75}|Traffic Laws.csproj|solutionrelative:exwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2564D66-FFBD-4887-B2B5-030A9C994A75}|Traffic Laws.csproj|c:\\users\\mark\\desktop\\project\\traffic-laws\\exwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F2564D66-FFBD-4887-B2B5-030A9C994A75}|Traffic Laws.csproj|solutionrelative:exwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F2564D66-FFBD-4887-B2B5-030A9C994A75}|Traffic Laws.csproj|c:\\users\\mark\\desktop\\project\\traffic-laws\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{F2564D66-FFBD-4887-B2B5-030A9C994A75}|Traffic Laws.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F2564D66-FFBD-4887-B2B5-030A9C994A75}|Traffic Laws.csproj|c:\\users\\mark\\desktop\\project\\traffic-laws\\exwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2564D66-FFBD-4887-B2B5-030A9C994A75}|Traffic Laws.csproj|solutionrelative:exwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2564D66-FFBD-4887-B2B5-030A9C994A75}|Traffic Laws.csproj|c:\\users\\mark\\desktop\\project\\traffic-laws\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2564D66-FFBD-4887-B2B5-030A9C994A75}|Traffic Laws.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2564D66-FFBD-4887-B2B5-030A9C994A75}|Traffic Laws.csproj|c:\\users\\mark\\desktop\\project\\traffic-laws\\logs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2564D66-FFBD-4887-B2B5-030A9C994A75}|Traffic Laws.csproj|solutionrelative:logs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2564D66-FFBD-4887-B2B5-030A9C994A75}|Traffic Laws.csproj|c:\\users\\mark\\desktop\\project\\traffic-laws\\statisticswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F2564D66-FFBD-4887-B2B5-030A9C994A75}|Traffic Laws.csproj|solutionrelative:statisticswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F2564D66-FFBD-4887-B2B5-030A9C994A75}|Traffic Laws.csproj|c:\\users\\mark\\desktop\\project\\traffic-laws\\statisticswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F2564D66-FFBD-4887-B2B5-030A9C994A75}|Traffic Laws.csproj|solutionrelative:statisticswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2564D66-FFBD-4887-B2B5-030A9C994A75}|Traffic Laws.csproj|c:\\users\\mark\\desktop\\project\\traffic-laws\\traffic laws.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{F2564D66-FFBD-4887-B2B5-030A9C994A75}|Traffic Laws.csproj|solutionrelative:traffic laws.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2564D66-FFBD-4887-B2B5-030A9C994A75}|Traffic Laws.csproj|c:\\users\\mark\\desktop\\project\\traffic-laws\\dictonary\\dictionarymain.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F2564D66-FFBD-4887-B2B5-030A9C994A75}|Traffic Laws.csproj|solutionrelative:dictonary\\dictionarymain.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2564D66-FFBD-4887-B2B5-030A9C994A75}|Traffic Laws.csproj|c:\\users\\mark\\desktop\\project\\traffic-laws\\finalwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2564D66-FFBD-4887-B2B5-030A9C994A75}|Traffic Laws.csproj|solutionrelative:finalwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,21 +26,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "DictionaryMain.xaml",
-              "DocumentMoniker": "C:\\Users\\Mark\\Desktop\\project\\Traffic-Laws\\Dictonary\\DictionaryMain.xaml",
-              "RelativeDocumentMoniker": "Dictonary\\DictionaryMain.xaml",
-              "ToolTip": "C:\\Users\\Mark\\Desktop\\project\\Traffic-Laws\\Dictonary\\DictionaryMain.xaml",
-              "RelativeToolTip": "Dictonary\\DictionaryMain.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-01T22:10:02.268Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
@@ -75,113 +38,52 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "ExWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Mark\\Desktop\\project\\Traffic-Laws\\ExWindow.xaml.cs",
               "RelativeDocumentMoniker": "ExWindow.xaml.cs",
               "ToolTip": "C:\\Users\\Mark\\Desktop\\project\\Traffic-Laws\\ExWindow.xaml.cs",
               "RelativeToolTip": "ExWindow.xaml.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAQwBsAAAADAAAAAAAAAA==",
+              "ViewState": "AgIAAKYAAAAAAAAAAAAAAOYAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T00:11:58.1Z",
+              "WhenOpened": "2024-12-04T00:25:14.499Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Logs.cs",
-              "DocumentMoniker": "C:\\Users\\Mark\\Desktop\\project\\Traffic-Laws\\Logs.cs",
-              "RelativeDocumentMoniker": "Logs.cs",
-              "ToolTip": "C:\\Users\\Mark\\Desktop\\project\\Traffic-Laws\\Logs.cs",
-              "RelativeToolTip": "Logs.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T00:07:50.336Z"
+              "DocumentIndex": 1,
+              "Title": "ExWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Mark\\Desktop\\project\\Traffic-Laws\\ExWindow.xaml",
+              "RelativeDocumentMoniker": "ExWindow.xaml",
+              "ToolTip": "C:\\Users\\Mark\\Desktop\\project\\Traffic-Laws\\ExWindow.xaml",
+              "RelativeToolTip": "ExWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-04T00:22:20.975Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Mark\\Desktop\\project\\Traffic-Laws\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
               "ToolTip": "C:\\Users\\Mark\\Desktop\\project\\Traffic-Laws\\MainWindow.xaml",
               "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-04T00:07:44.667Z",
+              "WhenOpened": "2024-12-04T00:21:54.901Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Mark\\Desktop\\project\\Traffic-Laws\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\Mark\\Desktop\\project\\Traffic-Laws\\MainWindow.xaml.cs",
-              "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAAH8AAAAAAAAAAAAcwIoAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T00:07:41.519Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "StatisticsWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\Mark\\Desktop\\project\\Traffic-Laws\\StatisticsWindow.xaml",
-              "RelativeDocumentMoniker": "StatisticsWindow.xaml",
-              "ToolTip": "C:\\Users\\Mark\\Desktop\\project\\Traffic-Laws\\StatisticsWindow.xaml",
-              "RelativeToolTip": "StatisticsWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-04T00:07:01.519Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "StatisticsWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Mark\\Desktop\\project\\Traffic-Laws\\StatisticsWindow.xaml.cs",
               "RelativeDocumentMoniker": "StatisticsWindow.xaml.cs",
               "ToolTip": "C:\\Users\\Mark\\Desktop\\project\\Traffic-Laws\\StatisticsWindow.xaml.cs",
               "RelativeToolTip": "StatisticsWindow.xaml.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAowCoAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-04T00:06:52.99Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Traffic Laws.csproj",
-              "DocumentMoniker": "C:\\Users\\Mark\\Desktop\\project\\Traffic-Laws\\Traffic Laws.csproj",
-              "RelativeDocumentMoniker": "Traffic Laws.csproj",
-              "ToolTip": "C:\\Users\\Mark\\Desktop\\project\\Traffic-Laws\\Traffic Laws.csproj",
-              "RelativeToolTip": "Traffic Laws.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-12-04T00:06:44.421Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "FinalWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Mark\\Desktop\\project\\Traffic-Laws\\FinalWindow.xaml.cs",
-              "RelativeDocumentMoniker": "FinalWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\Mark\\Desktop\\project\\Traffic-Laws\\FinalWindow.xaml.cs",
-              "RelativeToolTip": "FinalWindow.xaml.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAgwBoAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T00:01:18.996Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Service.cs",
-              "DocumentMoniker": "C:\\Users\\Mark\\Desktop\\project\\Traffic-Laws\\Service.cs",
-              "RelativeDocumentMoniker": "Service.cs",
-              "ToolTip": "C:\\Users\\Mark\\Desktop\\project\\Traffic-Laws\\Service.cs",
-              "RelativeToolTip": "Service.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAnwCgAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T23:23:56.857Z",
-              "EditorCaption": ""
             }
           ]
         }

@@ -69,5 +69,18 @@ namespace Traffic_Laws
 		{
 			Application.Current.Shutdown();
 		}
+
+		private void HideButton_Click(object sender, RoutedEventArgs e)
+		{
+			Application.Current.MainWindow.WindowState = WindowState.Minimized;
+		}
+
+		private void Drag(object sender, RoutedEventArgs e)
+		{
+			if (Mouse.LeftButton == MouseButtonState.Pressed)
+			{
+				this.DragMove();
+			}
+		}
 	}
 }

@@ -25,7 +25,6 @@ namespace Traffic_Laws
     /// </summary>
     public partial class MainWindow : Window
     {
-		private static MainWindow? DragWindow;
 		public string selectedCategory = string.Empty;
         private const string ticketsButtonName = "button_tickets";
 		private const string topicsButtonName = "button_topics";
@@ -35,7 +34,6 @@ namespace Traffic_Laws
             InitializeComponent();
 			InitializeComboBox();
 			LaunchingDynamicElements();
-			DragWindow = this;
 
 		}
 
@@ -165,7 +163,7 @@ namespace Traffic_Laws
 		{
 			if (Mouse.LeftButton == MouseButtonState.Pressed)
 			{
-				MainWindow.DragWindow.DragMove();
+				this.DragMove();
 			}
 		}
 	}

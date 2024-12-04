@@ -19,12 +19,10 @@ namespace Traffic_Laws
 	/// </summary>
 	public partial class StatisticsWindow : Window
 	{
-		private static StatisticsWindow? DragWindow;
 		public StatisticsWindow(string type)
 		{
 			InitializeComponent();
 			Logs logs = new();
-			DragWindow = this;
 			if (type == "tickets")
 				amountLabel.Content += "экзаменов: ";
 			else
@@ -68,7 +66,7 @@ namespace Traffic_Laws
 		{
 			if (Mouse.LeftButton == MouseButtonState.Pressed)
 			{
-				StatisticsWindow.DragWindow.DragMove();
+				this.DragMove();
 			}
 		}
 	}

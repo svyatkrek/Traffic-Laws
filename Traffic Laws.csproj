@@ -1421,11 +1421,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="leftArrow.png" />
     <Resource Include="Resources\Fonts\AlumniSans-Medium.ttf" />
     <Resource Include="Resources\Fonts\AlumniSans-Regular.ttf" />
-    <Resource Include="rightArrow.png" />
-    <Resource Include="statisticsButton.png" />
   </ItemGroup>
 
 </Project>

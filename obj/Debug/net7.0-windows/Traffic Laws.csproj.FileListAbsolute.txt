@@ -63,3 +63,5 @@ C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Traffic Laws
 C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Traffic Laws_Content.g.cs
 C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Traffic .C443D577.Up2Date
 C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Traffic Laws.csproj.Fody.CopyLocal.cache
+C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Dictonary\DictionaryComboBox.baml
+C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Dictonary\test.baml

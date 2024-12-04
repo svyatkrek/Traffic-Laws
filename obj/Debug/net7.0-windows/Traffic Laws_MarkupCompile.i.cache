@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Users\Mark\Desktop\project\Traffic-Laws\App.xaml
-7-932456158
+9-214634731
 4112071676
 141319619470
 201725091800
-Dictonary\DictionaryMain.xaml;Dictonary\DictionaryRadioButton.xaml;ExWindow.xaml;FinalWindow.xaml;MainWindow.xaml;RulesWindow.xaml;StatisticsWindow.xaml;
+Dictonary\DictionaryComboBox.xaml;Dictonary\DictionaryMain.xaml;Dictonary\DictionaryRadioButton.xaml;Dictonary\test.xaml;ExWindow.xaml;FinalWindow.xaml;MainWindow.xaml;RulesWindow.xaml;StatisticsWindow.xaml;
 
-True
+False
 

@@ -6,30 +6,33 @@
         xmlns:local="clr-namespace:Traffic_Laws"
         mc:Ignorable="d"
         Closing="DataWindow_Closing"
-        Title="Traffic Laws" Height="770" Width="1080" WindowStartupLocation="CenterScreen" WindowStyle="None">
-    
+        Title="Traffic Laws" Height="770" Width="1080" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
             <RowDefinition Height="720"/>
         </Grid.RowDefinitions>
         <Grid x:Name="header" Grid.Row="0" Background="#FF28345D">
-            <Grid x:Name="dragHeader" HorizontalAlignment="Left" Width="985">
+            <Grid MouseDown="Drag" x:Name="dragHeader" HorizontalAlignment="Left" Width="985">
                 <Image Source="/images/logo.png" HorizontalAlignment="Left" Margin="0,6,0,6" />
-                <Label Content="ПРАВИЛА ДОРОЖНОГО ДВИЖЕНИЯ РЕСПУБЛИКИ БЕЛАРУСЬ" HorizontalAlignment="Left" Margin="80,0,0,0" VerticalAlignment="Center" FontSize="24"  Foreground="White" FontFamily="Alumni Sans"/>
+                <Label Content="ПРАВИЛА ДОРОЖНОГО ДВИЖЕНИЯ РЕСПУБЛИКИ БЕЛАРУСЬ" HorizontalAlignment="Left" Margin="80,0,0,0" VerticalAlignment="Center" FontSize="24"  Foreground="White" FontFamily="Alumni Sans" Width="895"/>
             </Grid>
-            <Button x:Name="exitButton" HorizontalAlignment="Right" Width="25" Height="25" Margin="0,0,20,0" BorderBrush="{x:Null}">
+            <Button x:Name="exitButton" HorizontalAlignment="Right" Width="25" Height="25" Margin="0,0,20,0" BorderBrush="{x:Null}" Click="DataWindow_Closing">
                 <Button.Background>
                     <ImageBrush ImageSource="/images/closeButton.png"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="hideButton" HorizontalAlignment="Right" Margin="0,0,65,0" Width="25" Height="5">
+            <Button x:Name="hideButton" HorizontalAlignment="Right" Margin="0,0,65,0" Width="25" Height="5" Click="HideButton_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="/images/hideButton.png"/>
                 </Button.Background>
             </Button>
         </Grid>
         <Grid Grid.Row="1" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="329*"/>
+                <ColumnDefinition Width="31*"/>
+            </Grid.ColumnDefinitions>
             <Grid.Background>
                 <ImageBrush ImageSource="/images/background.png"/>
             </Grid.Background>
@@ -38,7 +41,7 @@
                 <RowDefinition Height="250"/>
                 <RowDefinition Height="320"/>
             </Grid.RowDefinitions>
-            <Grid Grid.Row="0" HorizontalAlignment="Left" Width="1080" >
+            <Grid Grid.Row="0" HorizontalAlignment="Left" Width="1080" Grid.ColumnSpan="2" >
                 <Grid Margin="0,0,0,0">
                     <Image x:Name="dynamicImage" Source="/images/wheel.png" HorizontalAlignment="Left" Width="100" Height="100" Margin="20,25,0,25"/>
                     <Label Content="ПРОВЕРЬ СВОИ&#10;ЗНАНИЯ!" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="40"  Foreground="White" FontFamily="Alumni Sans" Width="320" Height="112" Margin="136,28,0,0" FontWeight="Bold">
@@ -47,38 +50,58 @@
                         </Label.Effect>
                     </Label>
                 </Grid>
-                <Button Width="175" Height="50" Content="ПРАВИЛА" Click="Rules_Button_Click" FontSize="30" Style="{DynamicResource ButtonStyleMainMenu}" Margin="0,0,60,60"/>
+                <Button Width="240" Height="55" Content="ПРАВИЛА" Click="Rules_Button_Click" FontSize="40" Style="{DynamicResource ButtonStyleMainMenu}"  Margin="0,20,35,0" VerticalAlignment="Top"/>
             </Grid>
-            <Grid Grid.Row="1" HorizontalAlignment="Left" Width="1080">
+            <Grid Grid.Row="1" HorizontalAlignment="Left" Width="1080" Grid.ColumnSpan="2">
                 <Grid Width="600" Height="100" VerticalAlignment="Top" Margin="0,20,0,0" >
-                    <Button Content="ЭКЗАМЕН" Style="{DynamicResource ButtonStyleMainMenu}" FontSize="40" Click="ButtonStart_Click" HorizontalAlignment="Left" Margin="20,0,0,0" VerticalAlignment="Center" Width="240" Height="55" />
-                    <Button Content="ЗАЧЕТ"   Style="{DynamicResource ButtonStyleMainMenu}" FontSize="40" Click="ButtonStart_Click" Margin="0,0,20,0" HorizontalAlignment="Right" VerticalAlignment="Center" Width="240" Height="55" />
+                    <Grid Width="240" Height="55" HorizontalAlignment="Left" Margin="20,0,0,0">
+                        <ComboBox SelectionChanged="ComboBoxStart_Click"  ItemsPanel="{DynamicResource ComboBoxPanelCustom}" x:Name="button_tickets"  ItemContainerStyle="{DynamicResource ComboBoxItemContainerStyleCustom}" Style="{DynamicResource ComboBoxStyleCustom}" FontSize="16" Width="240" Height="55" />
+                        <TextBlock Text="      ЭКЗАМЕН" FontFamily="Alumni Sans" FontSize="40" Margin="0,5,0,0"  IsHitTestVisible="False" >
+                            <TextBlock.Effect>
+                                <DropShadowEffect 
+                                    Color="Black" 
+                                    Opacity="0.55" 
+                                    Direction="270" BlurRadius="5" ShadowDepth="1"/>
+                            </TextBlock.Effect>
+                        </TextBlock>
+                    </Grid>
+                    <Grid Width="240" Height="55" HorizontalAlignment="Right" Margin="0,0,20,0">
+                        <ComboBox SelectionChanged="ComboBoxStart_Click" ItemsPanel="{DynamicResource ComboBoxPanelCustom}" x:Name="button_topics" ItemContainerStyle="{DynamicResource ComboBoxItemContainerStyleCustom}" Style="{DynamicResource ComboBoxStyleCustom}" FontSize="16" Width="240" Height="55" />
+                        <TextBlock Text="        ЗАЧЕТ" FontFamily="Alumni Sans" FontSize="40" Margin="0,5,0,0" IsHitTestVisible="False">
+                            <TextBlock.Effect>
+                                <DropShadowEffect 
+                                    Color="Black" 
+                                    Opacity="0.55" 
+                                    Direction="270" BlurRadius="5" ShadowDepth="1"/>
+                            </TextBlock.Effect>
+                        </TextBlock>
+                    </Grid>
                 </Grid>
                 <Grid Width="600" Height="100" VerticalAlignment="Bottom" Margin="0,0,0,20" >
-                    <Button Content="ФАКТЫ" Style="{DynamicResource ButtonStyleMainMenu}" FontSize="40" Click="ButtonStart_Click" HorizontalAlignment="Left" Margin="20,0,0,0" VerticalAlignment="Center" Width="240" Height="55" />
-                    <Button Content="ВИДЕО"   Style="{DynamicResource ButtonStyleMainMenu}" FontSize="40" Click="ButtonStart_Click" Margin="0,0,20,0" HorizontalAlignment="Right" VerticalAlignment="Center" Width="240" Height="55" FontFamily="Alumni Sans"/>
+                    <Button Content="ФАКТЫ" Style="{DynamicResource ButtonStyleMainMenu}" FontSize="40"  HorizontalAlignment="Left" Margin="20,0,0,0"  Width="240" Height="55" />
+                    <Button Content="ВИДЕО"   Style="{DynamicResource ButtonStyleMainMenu}" FontSize="40"  Margin="0,0,20,0" HorizontalAlignment="Right"  Width="240" Height="55" />
                 </Grid>
             </Grid>
-            <Grid Grid.Row="2">
+            <Grid Grid.Row="2" Grid.ColumnSpan="2">
                 <Grid HorizontalAlignment="Center" Width="102" Height="325" >
                     <Grid.Background>
                         <ImageBrush ImageSource="/images/roadSign.png"/>
                     </Grid.Background>
                     <Canvas>
-                        <Button x:Name="checkButton_3" Style="{DynamicResource CheckButton}" Content="СТАТИСТИКА" Click="RadioButton_Checked" Width="204" Height="47" Canvas.Left="-51" Canvas.Top="115" HorizontalAlignment="Center" VerticalAlignment="Top"  >
+                        <Button x:Name="checkButtonStatistics" Style="{DynamicResource CheckButton}" Content="СТАТИСТИКА" Click="RadioButton_Checked" Width="204" Height="47" Canvas.Left="-51" Canvas.Top="115" HorizontalAlignment="Center" VerticalAlignment="Top"  >
                             <Button.Background>
-                                <ImageBrush ImageSource="/statisticsButton.png"/>
+                                <ImageBrush ImageSource="/images/statisticsButton.png" />
                             </Button.Background>
                         </Button>
 
-                        <Button x:Name="checkButton_1" Style="{DynamicResource CheckButton}" Content="КАТЕГОРИЯ “B” " Click="RadioButton_Checked" Width="285" Height="55" Canvas.Left="-51" Canvas.Top="170" HorizontalAlignment="Center" VerticalAlignment="Top">
+                        <Button x:Name="A_B"  Style="{DynamicResource CheckButton}" Content="КАТЕГОРИЯ “B”          "  Click="RadioButton_Checked" Width="285" Height="55" Canvas.Left="-51" Canvas.Top="170" HorizontalAlignment="Center" VerticalAlignment="Top">
                             <Button.Background>
-                                <ImageBrush ImageSource="/rightArrow.png"/>
+                                <ImageBrush ImageSource="/images/rightArrow.png"/>
                             </Button.Background>
                         </Button>
-                        <Button x:Name="checkButton_2" Style="{DynamicResource CheckButton}" Content="КАТЕГОРИЯ “C” "  Click="RadioButton_Checked" Width="285" Height="55" Canvas.Left="-132" Canvas.Top="230" HorizontalAlignment="Center" VerticalAlignment="Top">
+                        <Button x:Name="C_D" Style="{DynamicResource CheckButton}" Content="                   КАТЕГОРИЯ “C”"  Click="RadioButton_Checked" Width="285" Height="55" Canvas.Left="-130" Canvas.Top="230" HorizontalAlignment="Center" VerticalAlignment="Top">
                             <Button.Background>
-                                <ImageBrush ImageSource="/leftArrow.png"/>
+                                <ImageBrush ImageSource="/images/leftArrow.png"/>
                             </Button.Background>
                         </Button>
                     </Canvas>

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Sockets;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
@@ -23,33 +25,38 @@ namespace Traffic_Laws
     /// </summary>
     public partial class MainWindow : Window
     {
-
-        public string checkState = string.Empty;
-        public int modeStart;
-        public MainWindow()
+		private static MainWindow? DragWindow;
+		public string selectedCategory = string.Empty;
+        private const string ticketsButtonName = "button_tickets";
+		private const string topicsButtonName = "button_topics";
+		private const string statisticsButtonName = "checkButtonStatistics";
+		public MainWindow()
         {
             InitializeComponent();
-            LaunchingDynamicElements();
+			InitializeComboBox();
+			LaunchingDynamicElements();
+			DragWindow = this;
 
 		}
 
-        private async void LaunchingDynamicElements()
+		private async void LaunchingDynamicElements()
         {
 			Image img = (Image)this.FindName("dynamicImage");
-            int position = -950;
+            int position = -100;
             int angle = 0;
 			RotateTransform rotateTransform = new();
 			while (true)
             {
-                position += 5;
+                if (position < 20)
+                    position += 5;
                 angle += 5;
                 if (angle > 360)
                     angle -= 360;
-                if (position > 2000)
-                    position -= 2200;
-				img.Margin = new Thickness(position, 0, 0, 10);
-                //TransformGroup transformGroup = new();
+                
+                img.Margin = new Thickness(position, 0, 0, 10);
                 rotateTransform.Angle = angle;
+                rotateTransform.CenterX = 50;
+                rotateTransform.CenterY = 50;
                 img.RenderTransform = rotateTransform;
 				await Task.Run(() => Thread.Sleep(50));
 			}
@@ -67,55 +74,99 @@ namespace Traffic_Laws
         {
 			Button? button = e.Source as Button;
 
-            if (button.Name == checkState)
+            if (button.Name == selectedCategory)
             {
-                checkState = string.Empty;
-				button.Background = new SolidColorBrush(Color.FromArgb(0, 0, 0, 0));
+				selectedCategory = string.Empty;
+				button.Foreground = new SolidColorBrush(Color.FromRgb(0, 0, 0));
 			}
             else
             {
-				Button oldActiveButton = (Button)this.FindName(checkState);
+				Button oldActiveButton = (Button)this.FindName(selectedCategory);
                 if (oldActiveButton != null)
-                    oldActiveButton.Background = button.Background;
+                    oldActiveButton.Foreground = button.Foreground;
                 
 
-				button.Background = new SolidColorBrush(Color.FromArgb(85, 0, 0, 0));
-
-				checkState = button.Name;
+				button.Foreground = new SolidColorBrush(Color.FromRgb( 13, 180, 185));
+				selectedCategory = button.Name;
 			}
-        }
-
-		private void ButtonStart_Click(object sender, RoutedEventArgs e)
+			InitializeComboBox();
+		}
+		private void InitializeComboBox()
 		{
-			Button? button = e.Source as Button;
+			if (selectedCategory != statisticsButtonName)
+			{
+				ComboBox ticketsComboBox = (ComboBox)this.FindName(ticketsButtonName);
+				ComboBox topicsComboBox = (ComboBox)this.FindName(topicsButtonName);
+				ticketsComboBox.Items.Clear();
+				topicsComboBox.Items.Clear();
 
-            if (button.Content.ToString() == "Экзамен")
-                modeStart = 1;
-            else
-                modeStart = 2;
-
-            if (checkState != string.Empty)
-            {
-                int category = Convert.ToInt32(checkState.Split('_')[1]);
-                if (category != 3)
-                {
-					ExWindow exam = new(modeStart, category);
-					exam.Show();
-					this.Hide();
+				if (selectedCategory != String.Empty)
+				{
+					ticketsComboBox.IsEnabled = true;
+					topicsComboBox.IsEnabled = true;
+					List<string> tickets_list = Service.GetFileNamesByParams(ticketsButtonName.Split('_')[1], selectedCategory);
+					List<string> topics_list = Service.GetFileNamesByParams(topicsButtonName.Split('_')[1], selectedCategory);
+					ticketsComboBox.Items.Add("Любой");
+					topicsComboBox.Items.Add("Любой");
+					foreach (string ticket in tickets_list)
+					{
+						string tmp = WebUtility.UrlDecode(ticket.Split('.')[0].Split("/")[^1]);
+						ticketsComboBox.Items.Add(tmp);
+					}
+					foreach (string topic in topics_list)
+					{
+						string tmp = WebUtility.UrlDecode(topic.Split('.')[0].Split("/")[^1]);
+						topicsComboBox.Items.Add(tmp);
+					}
 				}
-                else
-                {
-                    StatisticsWindow statisticsWindow = new(modeStart);
-                    statisticsWindow.Show();
-                    this.Hide();
-                }
-                
+				else
+				{
+					ticketsComboBox.IsEnabled = false;
+					topicsComboBox.IsEnabled = false;
+				}
+			}
+
+		}
+
+		private void ComboBoxStart_Click(object sender, SelectionChangedEventArgs e)
+		{
+			ComboBox? comboBox = e.Source as ComboBox;
+			string type = comboBox.Name.Split("_")[1];
+			string selectedFile = "";
+			if (comboBox.SelectedIndex != 0) 
+				selectedFile = comboBox.SelectedItem.ToString();
+				
+			if (selectedCategory != statisticsButtonName)
+			{
+				ExWindow exam = new(type, selectedCategory, selectedFile);
+				exam.Show();
+				this.Hide();
+			}
+			else
+			{
+				StatisticsWindow statisticsWindow = new(type);
+				statisticsWindow.Show();
+				this.Hide();
 			}
 		}
 
 		private void DataWindow_Closing(object sender, EventArgs e)
 		{
 			Application.Current.Shutdown();
+		}
+
+
+		private void HideButton_Click(object sender, RoutedEventArgs e)
+		{
+			Application.Current.MainWindow.WindowState = WindowState.Minimized;
+		}
+
+		private void Drag(object sender, RoutedEventArgs e)
+		{
+			if (Mouse.LeftButton == MouseButtonState.Pressed)
+			{
+				MainWindow.DragWindow.DragMove();
+			}
 		}
 	}
 }

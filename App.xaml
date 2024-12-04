@@ -8,6 +8,7 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Dictonary/DictionaryMain.xaml" />
                 <ResourceDictionary Source="Dictonary/DictionaryRadioButton.xaml" />
+                <ResourceDictionary Source="Dictonary/DictionaryComboBox.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

@@ -10,37 +10,33 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Xml;
 using Traffic_Laws.Entity;
 
 namespace Traffic_Laws
 {
 	public class Service
 	{
-		public List<Question> data;
+		public List<Question>? data;
 		public List<QuestionState> QuestionsState = new();
-		private const string categoryFolderNameA = "A_B";
-		private const string categoryFolderNameC = "C_D";
-		private const string typeFolderNameExam = "tickets";
-		private const string typeFolderNameTest = "topics";
+		private const string FilePathPattern = "Contents/questions/{0}/{1}";
 
-		
 
-		public void InitData(int type, int category)
+		public void InitData(string type, string category, bool isRandom, string selectedName = "")
 		{
-			if (type == 1)
+			string folderPath = ConstructToPath(type, category);
+
+			if (isRandom)
 			{
-				if (category == 1)
-					InitDataExamCategory(type, categoryFolderNameA);
-				else
-					InitDataExamCategory(type, categoryFolderNameC);
+				int randomNumber = GetRandomNumber(1, GetNumberOfFilesByPath(folderPath));
+				folderPath = GetAllFilesToPath(folderPath)[randomNumber - 1];
 			}
 			else
 			{
-				if (category == 1)
-					InitDataTestCategory(type, categoryFolderNameA);
-				else
-					InitDataTestCategory(type, categoryFolderNameC);
+				folderPath = Path.Combine(folderPath, ConstructFileName(selectedName));
 			}
+
+			ProcessData(folderPath);
 
 			for (int i = 0; i < data.Count; i++)
 			{
@@ -48,37 +44,34 @@ namespace Traffic_Laws
 				QuestionsState.Add(tmp);
 			}
 		}
-
-		private void InitDataExamCategory(int type, string categoryFolderName)
+		public static List<string> GetFileNamesByParams(string type, string category)
 		{
-			int ticketNumber = GetRandomNumber(1, 40);
-
-			string tmp = GetStringData(ConstructToPath(type, categoryFolderName, ticketNumber));
-
-			data = JsonSerializer.Deserialize<List<Question>>(tmp);
-
+			return GetAllFilesToPath(string.Format(FilePathPattern, category, type)); ;
 		}
 
-		private void InitDataTestCategory(int type, string categoryFolderName)
+		private void ProcessData(string folderPath)
 		{
-			int ticketNumber = GetRandomNumber(1, 26);
-			string tmp = GetStringData(ConstructToPath(type, categoryFolderName, ticketNumber));
+			string tmp = GetStringData(folderPath);
 
 			data = JsonSerializer.Deserialize<List<Question>>(tmp);
+		}
 
-			int count = data.Count;
-			if (count > 10)
-				for (int i = 0; i < count - 10; ++i)
-				{
-					int randomIndex = GetRandomNumber(0, count - 1 - i);
-					data.RemoveAt(randomIndex);
-				}
+		private static string ConstructFileName(string name)
+		{
+			return name + ".json";
+		}
+		private static int GetNumberOfFilesByPath(string path)
+		{
+			return GetAllFilesToPath(path).Count;
+		}
+		private static string ConstructToPath(string type, string category)
+		{
+			return string.Format(FilePathPattern, category, type);
 		}
 
 		private static int GetRandomNumber(int first, int last)
 		{
 			var rand = new Random();
-
 			return rand.Next(first, last + 1);
 		}
 
@@ -92,27 +85,8 @@ namespace Traffic_Laws
 
 		}
 
-		private static string ConstructToPath( int type, string categoryFolderName, int number)
-		{
-			string path = Path.Combine("Contents", "questions", categoryFolderName);
-			if (type == 1)
-			{
-				string fileName = String.Concat("Билет ", number.ToString(), ".json");
-				return Path.Combine(path, typeFolderNameExam, fileName);
-			}
-			else
-			{
-				string pathToFolder = Path.Combine(path, typeFolderNameTest);
-
-				string fileName = GetAllFilesToPath(pathToFolder)[number - 1];
-				return fileName;
-			}
-			
-		}
-
 		private static List<string> GetAllFilesToPath(string folderPath)
 		{
-
 			folderPath = folderPath.Replace("\\", "/");
 
 			List<string> filesList = new();
@@ -138,9 +112,9 @@ namespace Traffic_Laws
 					}
 				}
 			}
-
 			return filesList;
 		}
+
 
 	}
 }

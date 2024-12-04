@@ -10,11 +10,7 @@
     <Grid Margin="0,0,0,0">
 
         <Button Content="&lt;" Width="40" Height="60" VerticalAlignment="Top" HorizontalAlignment="Left"  FontSize="40" Click="Menu_Button_Click"  Foreground="Black" Background="White" BorderBrush="{x:Null}" />
-        <DockPanel Margin="40,-120,0,0">
-            <wv2:WebView2 Name="webView"
-          Source="https://pdd.by/pdd/ru/general/" 
-                  />
-        </DockPanel>
+        
 
 
 

@@ -19,12 +19,13 @@ namespace Traffic_Laws
 	/// </summary>
 	public partial class StatisticsWindow : Window
 	{
-		public StatisticsWindow(int type)
+		private static StatisticsWindow? DragWindow;
+		public StatisticsWindow(string type)
 		{
 			InitializeComponent();
 			Logs logs = new();
-
-			if (type == 1)
+			DragWindow = this;
+			if (type == "tickets")
 				amountLabel.Content += "экзаменов: ";
 			else
 				amountLabel.Content += "зачетов: ";
@@ -43,10 +44,6 @@ namespace Traffic_Laws
 				amountCorrectLabel.Content = string.Empty;
 				timeLabel.Content = string.Empty;
 			}
-
-
-			
-
 		}
 
 		private void Menu_Button_Click(object sender, RoutedEventArgs e)
@@ -59,6 +56,20 @@ namespace Traffic_Laws
 		private void DataWindow_Closing(object sender, EventArgs e)
 		{
 			Application.Current.Shutdown();
+		}
+
+
+		private void hideButton_Click(object sender, RoutedEventArgs e)
+		{
+			Application.Current.MainWindow.WindowState = WindowState.Minimized;
+		}
+
+		private void Drag(object sender, RoutedEventArgs e)
+		{
+			if (Mouse.LeftButton == MouseButtonState.Pressed)
+			{
+				StatisticsWindow.DragWindow.DragMove();
+			}
 		}
 	}
 }

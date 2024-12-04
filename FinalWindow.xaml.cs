@@ -19,12 +19,12 @@ namespace Traffic_Laws
 	/// </summary>
 	public partial class FinalWindow : Window
 	{
-		public FinalWindow(int type, int amountAnswer, int amountUncorrectAnswer, int amountCorrectAnswer, int _time)
+		public FinalWindow(string type, int amountAnswer, int amountUncorrectAnswer, int amountCorrectAnswer, int _time)
 		{
 			InitializeComponent();
 			string time = String.Concat((_time / 60).ToString(), " минут ", (_time - (_time / 60 * 60)).ToString(), " секунд");
 			timeLabel.Content += time;
-			if (type == 1)
+			if (type == "tickets")
 			{
 				mainLabel.Content += "Экзамен";
 				if (amountAnswer - amountCorrectAnswer <= 1)

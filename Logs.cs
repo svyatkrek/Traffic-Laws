@@ -19,10 +19,10 @@ namespace Traffic_Laws
 		public string AmountUncorrect;
 		public string BestTime;
 
-		public void Save(int type, string answerCorrect, string answerUncorrect, string time)
+		public void Save(string type, string answerCorrect, string answerUncorrect, string time)
 		{
 
-			string pathToFile = GetPathByType(type);
+			string pathToFile = GetPath(type);
 
 
 			if (!File.Exists(pathToFile))
@@ -36,10 +36,10 @@ namespace Traffic_Laws
 			File.AppendAllText(pathToFile, text);
 		}
 
-		public bool Load(int type)
+		public bool Load(string type)
 		{
 			string[] data;
-			string pathToFile = GetPathByType(type);
+			string pathToFile = GetPath(type);
 			try
 			{
 				data = File.ReadAllText(pathToFile).Split(';');
@@ -74,12 +74,9 @@ namespace Traffic_Laws
             return true;
 		}
 
-		public string GetPathByType(int type)
+		public string GetPath(string type)
 		{
-			if (type == 1)
-				return Path.Combine(PathToLogs, String.Concat("exam-", FileName));
-			else
-				return Path.Combine(PathToLogs, String.Concat("test-", FileName));
+				return Path.Combine(PathToLogs, String.Concat(type, "-", FileName));
 		}
 	}
 }

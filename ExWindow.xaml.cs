@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Threading;
@@ -15,22 +16,27 @@ namespace Traffic_Laws
     /// </summary>
     public partial class ExWindow : Window
     {
+		private static ExWindow? DragWindow;
 		private readonly Service service = new();
-		private int type;
+		private readonly string type;
         private int QuestionNumber;
         private DispatcherTimer timer;
 		private int time = 0;
 		private int AmountQuestion;
 
-		public ExWindow(int _typeWindow, int _category)
+		public ExWindow(string _typeWindow, string _category, string selectedFile)
         {
 			InitializeComponent();
 			type = _typeWindow;
-			service.InitData(_typeWindow, _category);
+			if (selectedFile == "")
+				service.InitData(type, _category, true);
+			else
+				service.InitData(type, _category, false, selectedFile);
 			QuestionNumber = 0;
 			DrawPagination();
 			DrawQuestion();
 			TimerStart();
+			DragWindow = this;
 
 		}
 
@@ -219,6 +225,19 @@ namespace Traffic_Laws
 		private void DataWindow_Closing(object sender, EventArgs e)
 		{
 			Application.Current.Shutdown();
+		}
+
+		private void HideButton_Click(object sender, RoutedEventArgs e)
+		{
+			Application.Current.MainWindow.WindowState = WindowState.Minimized;
+		}
+
+		private void Drag(object sender, RoutedEventArgs e)
+		{
+			if (Mouse.LeftButton == MouseButtonState.Pressed)
+			{
+				ExWindow.DragWindow.DragMove();
+			}
 		}
 	}
 }

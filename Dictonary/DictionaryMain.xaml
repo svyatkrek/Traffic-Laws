@@ -6,21 +6,31 @@
 
     <Style x:Key="ButtonStyleMainMenu" TargetType="{x:Type Button}">
         <Setter Property="Background" Value="#E3E6FF"/>
-        <Setter Property="Foreground" Value="#262626"/>
+        <Setter Property="Foreground" Value="Black"/>
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="HorizontalAlignment" Value="Right"/>
-        <Setter Property="VerticalAlignment" Value="Bottom"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="FontFamily" Value="Alumni Sans"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
                     <Border Background="{TemplateBinding Background}" 
-                            BorderBrush="{TemplateBinding BorderBrush}" 
-                            BorderThickness="{TemplateBinding BorderThickness}" 
-                            CornerRadius="15"                           
-                            TextBlock.Foreground="{TemplateBinding Foreground}">
-                        <ContentPresenter HorizontalAlignment="Center" 
-                                              VerticalAlignment="Center"/>
+                        BorderBrush="{TemplateBinding BorderBrush}" 
+                        BorderThickness="{TemplateBinding BorderThickness}" 
+                        CornerRadius="15">
+                        <TextBlock Text="{TemplateBinding Content}" 
+                               Foreground="{TemplateBinding Foreground}" 
+                               FontFamily="{TemplateBinding FontFamily}" 
+                               FontSize="{TemplateBinding FontSize}" 
+                               HorizontalAlignment="Center" 
+                               VerticalAlignment="Center">
+                            <TextBlock.Effect>
+                                <DropShadowEffect 
+                                                Color="Black" 
+                                                Opacity="0.55" 
+                                                Direction="270" BlurRadius="5" ShadowDepth="1"/>
+                            </TextBlock.Effect>
+                        </TextBlock>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
@@ -28,17 +38,48 @@
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
                 <Trigger.Setters>
-                    <Setter Property="Background" Value="#2f2d2d"/>
+                    <Setter Property="Background" Value="#c8c8c8"/>
                 </Trigger.Setters>
+                <Trigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation
+                                    Storyboard.TargetProperty="Width"
+                                    To="280"
+                                Duration="0:0:0.2" />
+                            <DoubleAnimation
+                                    Storyboard.TargetProperty="Height"
+                                    To="64"
+                                Duration="0:0:0.2" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.EnterActions>
+                <Trigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation
+                                    Storyboard.TargetProperty="Width"
+                                    To="240"
+                                Duration="0:0:0.2" />
+                            <DoubleAnimation
+                            Storyboard.TargetProperty="Height"
+                            To="55"
+                        Duration="0:0:0.2" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.ExitActions>
             </Trigger>
         </Style.Triggers>
     </Style>
-   
+
 
     <!-- ButtonCheck -->
 
+    <ItemsPanelTemplate x:Key="ComboBoxItemsPanelCustom">
+        <StackPanel/>
+    </ItemsPanelTemplate>
     <Style x:Key="CheckButton" TargetType="{x:Type Button}">
-        <Setter Property="Foreground" Value="#262626"/>
+        <Setter Property="Foreground" Value="Black"/>
         <Setter Property="BorderBrush" Value="Transparent"/>
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="HorizontalAlignment" Value="left"/>
@@ -48,11 +89,22 @@
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
                     <Border Background="{TemplateBinding Background}" 
-                        BorderBrush="{TemplateBinding BorderBrush}" 
-                        BorderThickness="{TemplateBinding BorderThickness}"                         
-                        TextBlock.Foreground="{TemplateBinding Foreground}">
-                        <ContentPresenter HorizontalAlignment="Center" 
-                                          VerticalAlignment="Center"/>
+                BorderBrush="{TemplateBinding BorderBrush}" 
+                BorderThickness="{TemplateBinding BorderThickness}" 
+                CornerRadius="15">
+                        <TextBlock Text="{TemplateBinding Content}" 
+                       Foreground="{TemplateBinding Foreground}" 
+                       FontFamily="{TemplateBinding FontFamily}" 
+                       FontSize="{TemplateBinding FontSize}" 
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center">
+                            <TextBlock.Effect>
+                                <DropShadowEffect 
+                                    Color="Black" 
+                                    Opacity="0.55" 
+                                    Direction="270" BlurRadius="5" ShadowDepth="1"/>    
+                            </TextBlock.Effect>
+                        </TextBlock>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
@@ -60,7 +112,7 @@
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
                 <Trigger.Setters>
-                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="Background" Value="#f9f7f7"/>
                 </Trigger.Setters>
             </Trigger>
         </Style.Triggers>

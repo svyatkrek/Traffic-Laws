@@ -56,7 +56,7 @@
                 <Grid Width="600" Height="100" VerticalAlignment="Top" Margin="0,20,0,0" >
                     <Grid Width="240" Height="55" HorizontalAlignment="Left" Margin="20,0,0,0">
                         <ComboBox SelectionChanged="ComboBoxStart_Click"  ItemsPanel="{DynamicResource ComboBoxPanelCustom}" x:Name="button_tickets"  ItemContainerStyle="{DynamicResource ComboBoxItemContainerStyleCustom}" Style="{DynamicResource ComboBoxStyleCustom}" FontSize="16" Width="240" Height="55" />
-                        <TextBlock Text="      ЭКЗАМЕН" FontFamily="Alumni Sans" FontSize="40" Margin="0,5,0,0"  IsHitTestVisible="False" >
+                        <TextBlock x:Name="TextBoxExam" Text="      ЭКЗАМЕН" FontFamily="Alumni Sans" FontSize="40" Margin="0,5,0,0"  IsHitTestVisible="False" Foreground="#99000000" >
                             <TextBlock.Effect>
                                 <DropShadowEffect 
                                     Color="Black" 
@@ -67,7 +67,7 @@
                     </Grid>
                     <Grid Width="240" Height="55" HorizontalAlignment="Right" Margin="0,0,20,0">
                         <ComboBox SelectionChanged="ComboBoxStart_Click" ItemsPanel="{DynamicResource ComboBoxPanelCustom}" x:Name="button_topics" ItemContainerStyle="{DynamicResource ComboBoxItemContainerStyleCustom}" Style="{DynamicResource ComboBoxStyleCustom}" FontSize="16" Width="240" Height="55" />
-                        <TextBlock Text="        ЗАЧЕТ" FontFamily="Alumni Sans" FontSize="40" Margin="0,5,0,0" IsHitTestVisible="False">
+                        <TextBlock x:Name="TextBoxTest" Text="        ЗАЧЕТ" FontFamily="Alumni Sans" FontSize="40" Margin="0,5,0,0" IsHitTestVisible="False"  Foreground="#99000000">
                             <TextBlock.Effect>
                                 <DropShadowEffect 
                                     Color="Black" 

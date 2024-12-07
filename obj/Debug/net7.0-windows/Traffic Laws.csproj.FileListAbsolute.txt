@@ -26,11 +26,9 @@ C:\Users\Mark\Desktop\project\Traffic-Laws\bin\Debug\net7.0-windows\Traffic Laws
 C:\Users\Mark\Desktop\project\Traffic-Laws\bin\Debug\net7.0-windows\Traffic Laws.runtimeconfig.json
 C:\Users\Mark\Desktop\project\Traffic-Laws\bin\Debug\net7.0-windows\Traffic Laws.dll
 C:\Users\Mark\Desktop\project\Traffic-Laws\bin\Debug\net7.0-windows\Traffic Laws.pdb
-C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\MainWindow.g.cs
 C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\App.g.cs
 C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Traffic Laws_MarkupCompile.cache
 C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Traffic Laws_MarkupCompile.lref
-C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\MainWindow.baml
 C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Traffic Laws.g.resources
 C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Traffic Laws.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Traffic Laws.AssemblyInfoInputs.cache
@@ -42,17 +40,9 @@ C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\refint\Traff
 C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Traffic Laws.pdb
 C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Traffic Laws.genruntimeconfig.cache
 C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\ref\Traffic Laws.dll
-C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\ExWindow.g.cs
 C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\App.baml
-C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\ExWindow.baml
 C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Dictonary\DictionaryMain.baml
 C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Dictonary\DictionaryRadioButton.baml
-C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\RulesWindow.g.cs
-C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\RulesWindow.baml
-C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\FinalWindow.g.cs
-C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\FinalWindow.baml
-C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\StatisticsWindow.g.cs
-C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\StatisticsWindow.baml
 C:\Users\Mark\Desktop\project\Traffic-Laws\bin\Debug\net7.0-windows\runtimes\win-x86\native\WebView2Loader.dll
 C:\Users\Mark\Desktop\project\Traffic-Laws\bin\Debug\net7.0-windows\runtimes\win-x64\native\WebView2Loader.dll
 C:\Users\Mark\Desktop\project\Traffic-Laws\bin\Debug\net7.0-windows\runtimes\win-arm64\native\WebView2Loader.dll
@@ -64,3 +54,15 @@ C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Traffic Laws
 C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Traffic .C443D577.Up2Date
 C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Traffic Laws.csproj.Fody.CopyLocal.cache
 C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Dictonary\DictionaryComboBox.baml
+C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Windows\ExWindow.g.cs
+C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Windows\FinalWindow.g.cs
+C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Windows\RulesWindow.g.cs
+C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Windows\StatisticsWindow.g.cs
+C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Windows\ExWindow.baml
+C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Windows\FinalWindow.baml
+C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Windows\RulesWindow.baml
+C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Windows\StatisticsWindow.baml
+C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\MainWindow.g.cs
+C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\MainWindow.baml
+C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Windows\FactWindow.g.cs
+C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Windows\FactWindow.baml

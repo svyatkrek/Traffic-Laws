@@ -9,16 +9,19 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="ExWindow.xaml.cs">
+    <Compile Update="Windows\ExWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="FinalWindow.xaml.cs">
+    <Compile Update="Windows\FactWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="RulesWindow.xaml.cs">
+    <Compile Update="Windows\FinalWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="StatisticsWindow.xaml.cs">
+    <Compile Update="Windows\RulesWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\StatisticsWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -29,19 +32,22 @@
     <Page Update="Dictonary\DictionaryRadioButton.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="ExWindow.xaml">
+    <Page Update="Windows\ExWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="FinalWindow.xaml">
+    <Page Update="Windows\FactWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\FinalWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="RulesWindow.xaml">
+    <Page Update="Windows\RulesWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="StatisticsWindow.xaml">
+    <Page Update="Windows\StatisticsWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

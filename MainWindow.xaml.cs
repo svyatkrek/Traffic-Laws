@@ -17,6 +17,7 @@ using System.Windows.Media.Effects;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Traffic_Laws.src;
 
 namespace Traffic_Laws
 {
@@ -91,17 +92,19 @@ namespace Traffic_Laws
 		}
 		private void InitializeComboBox()
 		{
+			ComboBox ticketsComboBox = (ComboBox)this.FindName(ticketsButtonName);
+			ComboBox topicsComboBox = (ComboBox)this.FindName(topicsButtonName);
+			ticketsComboBox.Items.Clear();
+			topicsComboBox.Items.Clear();
+			ticketsComboBox.IsEnabled = true;
+			topicsComboBox.IsEnabled = true;
+			TextBoxExam.Foreground = new SolidColorBrush(Color.FromArgb(255, 0, 0, 0));
+			TextBoxTest.Foreground = new SolidColorBrush(Color.FromArgb(255, 0, 0, 0));
 			if (selectedCategory != statisticsButtonName)
 			{
-				ComboBox ticketsComboBox = (ComboBox)this.FindName(ticketsButtonName);
-				ComboBox topicsComboBox = (ComboBox)this.FindName(topicsButtonName);
-				ticketsComboBox.Items.Clear();
-				topicsComboBox.Items.Clear();
 
 				if (selectedCategory != String.Empty)
 				{
-					ticketsComboBox.IsEnabled = true;
-					topicsComboBox.IsEnabled = true;
 					List<string> tickets_list = Service.GetFileNamesByParams(ticketsButtonName.Split('_')[1], selectedCategory);
 					List<string> topics_list = Service.GetFileNamesByParams(topicsButtonName.Split('_')[1], selectedCategory);
 					ticketsComboBox.Items.Add("Любой");
@@ -121,7 +124,14 @@ namespace Traffic_Laws
 				{
 					ticketsComboBox.IsEnabled = false;
 					topicsComboBox.IsEnabled = false;
+					TextBoxExam.Foreground = new SolidColorBrush(Color.FromArgb(60, 0, 0, 0));
+					TextBoxTest.Foreground = new SolidColorBrush(Color.FromArgb(60, 0, 0, 0));
 				}
+			}
+			else
+			{
+				ticketsComboBox.Items.Add("Посмотреть статистику экзаменов");
+				topicsComboBox.Items.Add("Посмотреть статистику зачетов");
 			}
 
 		}
@@ -133,10 +143,11 @@ namespace Traffic_Laws
 			string selectedFile = "";
 			if (comboBox.SelectedIndex != 0) 
 				selectedFile = comboBox.SelectedItem.ToString();
+
 				
 			if (selectedCategory != statisticsButtonName)
 			{
-				ExWindow exam = new(type, selectedCategory, selectedFile);
+				ExWindow exam = new(type, selectedCategory, selectedFile ?? "");
 				exam.Show();
 				this.Hide();
 			}
@@ -168,7 +179,3 @@ namespace Traffic_Laws
 		}
 	}
 }
-
-// Для экзаменов берем tickets, рандомный билет из 40, смотреть на выбор категории
-// Для зачета берем topics, открывается окно со всеми темами, человек выберает вопрос и будут вопросы по этому топику, если в теме больше 10 вопросов, то рандомно 10 вопросов, если меньше, то все
-// Если больше 1 ошибки, то зачет или экзамен не сдан

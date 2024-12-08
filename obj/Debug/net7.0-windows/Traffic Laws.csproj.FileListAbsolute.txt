@@ -66,3 +66,5 @@ C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\MainWindow.g
 C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\MainWindow.baml
 C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Windows\FactWindow.g.cs
 C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Windows\FactWindow.baml
+C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Windows\GameWindow.g.cs
+C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Windows\GameWindow.baml

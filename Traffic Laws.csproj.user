@@ -18,6 +18,9 @@
     <Compile Update="Windows\FinalWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Windows\GameWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Windows\RulesWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -42,6 +45,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\GameWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Windows\RulesWindow.xaml">

@@ -66,9 +66,7 @@ namespace Traffic_Laws
 		private void Drag(object sender, RoutedEventArgs e)
 		{
 			if (Mouse.LeftButton == MouseButtonState.Pressed)
-			{
 				this.DragMove();
-			}
 		}
 	}
 }

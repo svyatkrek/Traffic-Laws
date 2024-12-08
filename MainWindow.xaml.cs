@@ -183,5 +183,11 @@ namespace Traffic_Laws
 				this.DragMove();
 		}
 
-	}
+		private void GameButton_Click(object sender, RoutedEventArgs e)
+		{
+			GameWindow gameWindow = new();
+			gameWindow.Show();
+			this.Hide();
+		}
+    }
 }

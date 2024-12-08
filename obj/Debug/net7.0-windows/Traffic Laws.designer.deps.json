@@ -21,22 +21,22 @@
       "Fody/6.5.5": {},
       "Microsoft.NETCore.Platforms/1.1.0": {},
       "Microsoft.NETCore.Targets/1.1.0": {},
-      "Microsoft.Web.WebView2/1.0.2739.15": {
+      "Microsoft.Web.WebView2/1.0.2903.40": {
         "runtimeTargets": {
           "runtimes/win-arm64/native/WebView2Loader.dll": {
             "rid": "win-arm64",
             "assetType": "native",
-            "fileVersion": "1.0.2739.15"
+            "fileVersion": "1.0.2903.40"
           },
           "runtimes/win-x64/native/WebView2Loader.dll": {
             "rid": "win-x64",
             "assetType": "native",
-            "fileVersion": "1.0.2739.15"
+            "fileVersion": "1.0.2903.40"
           },
           "runtimes/win-x86/native/WebView2Loader.dll": {
             "rid": "win-x86",
             "assetType": "native",
-            "fileVersion": "1.0.2739.15"
+            "fileVersion": "1.0.2903.40"
           }
         }
       },
@@ -1095,12 +1095,12 @@
       "path": "microsoft.netcore.targets/1.1.0",
       "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
     },
-    "Microsoft.Web.WebView2/1.0.2739.15": {
+    "Microsoft.Web.WebView2/1.0.2903.40": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-hZg7vHWBg4RIiK3rhkNqX3hcBqqoVXVrrO2BVrVOiSmEgfLa7lY64G1tWh2VY84MfHIFLCAQNwn3Rwvu+ICHyw==",
-      "path": "microsoft.web.webview2/1.0.2739.15",
-      "hashPath": "microsoft.web.webview2.1.0.2739.15.nupkg.sha512"
+      "sha512": "sha512-THrzYAnJgE3+cNH+9Epr44XjoZoRELdVpXlWGPs6K9C9G6TqyDfVCeVAR/Er8ljLitIUX5gaSkPsy9wRhD1sgQ==",
+      "path": "microsoft.web.webview2/1.0.2903.40",
+      "hashPath": "microsoft.web.webview2.1.0.2903.40.nupkg.sha512"
     },
     "Microsoft.Win32.Primitives/4.3.0": {
       "type": "package",

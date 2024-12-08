@@ -106,6 +106,8 @@
                         </Button>
                     </Canvas>
                 </Grid>
+                <Button  x:Name="GameButton" Style="{DynamicResource GameButtonStyle}" HorizontalAlignment="Center"  Width="100" Height="100" Click="GameButton_Click" VerticalAlignment="Top"  BorderBrush="{x:Null}" Background="#02DDDDDD"  />
+
             </Grid>
         </Grid>
     </Grid>

@@ -1,5 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
+  <PropertyGroup Label="Globals">
+    <WebView2UseWinRT>False</WebView2UseWinRT>
+    <WebView2EnableCsWinRTProjection>False</WebView2EnableCsWinRTProjection>
+    <WebView2UseDispatchAdapter>False</WebView2UseDispatchAdapter>
+  </PropertyGroup>
+
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net7.0-windows</TargetFramework>
@@ -1418,12 +1424,23 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.2739.15" />
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.2903.40" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Resources\Fonts\AlumniSans-Medium.ttf" />
     <Resource Include="Resources\Fonts\AlumniSans-Regular.ttf" />
   </ItemGroup>
+	<ItemGroup>
+		<Content Include="Resources\Fonts\AlumniSans-Medium.ttf">
+			<CopyToOutputDirectory>Alumni Sans Medium</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Fonts\AlumniSans-Regular.ttf">
+			<CopyToOutputDirectory>Alumni Sans</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+	<ItemGroup>
+		<None Remove="Microsoft.Web.WebView2.Core.winmd" />
+	</ItemGroup>
 
 </Project>

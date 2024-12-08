@@ -70,7 +70,7 @@
                                 <GradientStop Color="#FF32458B" Offset="0.361"/>
                             </LinearGradientBrush>
                         </Border.Background>
-                        <Image x:Name="ImageFact"  HorizontalAlignment="Left" Width="416" Margin="50,78,10,78"/>
+                        <Image x:Name="ImageFact"  HorizontalAlignment="Left" Width="425" Margin="25,25,0,25"/>
                     </Border>
                     <TextBlock x:Name="TextBlockFact" Width="525" Height="220" Margin="40,0,0,0" TextWrapping="Wrap" FontSize="30" FontFamily="Alumni Sans" />
                 </StackPanel>

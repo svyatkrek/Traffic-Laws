@@ -47,10 +47,10 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.Web.WebView2/1.0.2739.15": {
+      "Microsoft.Web.WebView2/1.0.2903.40": {
         "type": "package",
         "build": {
-          "build/Microsoft.Web.WebView2.targets": {}
+          "buildTransitive/Microsoft.Web.WebView2.targets": {}
         },
         "runtimeTargets": {
           "runtimes/win-arm64/native/WebView2Loader.dll": {
@@ -1418,10 +1418,10 @@
         "runtime.json"
       ]
     },
-    "Microsoft.Web.WebView2/1.0.2739.15": {
-      "sha512": "hZg7vHWBg4RIiK3rhkNqX3hcBqqoVXVrrO2BVrVOiSmEgfLa7lY64G1tWh2VY84MfHIFLCAQNwn3Rwvu+ICHyw==",
+    "Microsoft.Web.WebView2/1.0.2903.40": {
+      "sha512": "THrzYAnJgE3+cNH+9Epr44XjoZoRELdVpXlWGPs6K9C9G6TqyDfVCeVAR/Er8ljLitIUX5gaSkPsy9wRhD1sgQ==",
       "type": "package",
-      "path": "microsoft.web.webview2/1.0.2739.15",
+      "path": "microsoft.web.webview2/1.0.2903.40",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -1449,6 +1449,7 @@
         "build/native/x86/WebView2Loader.dll.lib",
         "build/native/x86/WebView2LoaderStatic.lib",
         "build/wv2winrt.targets",
+        "buildTransitive/Microsoft.Web.WebView2.targets",
         "lib/Microsoft.Web.WebView2.Core.winmd",
         "lib/net462/Microsoft.Web.WebView2.Core.dll",
         "lib/net462/Microsoft.Web.WebView2.Core.xml",
@@ -1456,14 +1457,17 @@
         "lib/net462/Microsoft.Web.WebView2.WinForms.xml",
         "lib/net462/Microsoft.Web.WebView2.Wpf.dll",
         "lib/net462/Microsoft.Web.WebView2.Wpf.xml",
+        "lib_manual/net5.0-windows10.0.17763.0/Microsoft.Web.WebView2.Wpf.dll",
+        "lib_manual/net5.0-windows10.0.17763.0/Microsoft.Web.WebView2.Wpf.xml",
         "lib_manual/net6.0-windows10.0.17763.0/Microsoft.Web.WebView2.Core.Projection.dll",
+        "lib_manual/net8.0-windows10.0.17763.0/Microsoft.Web.WebView2.Core.Projection.dll",
         "lib_manual/netcoreapp3.0/Microsoft.Web.WebView2.Core.dll",
         "lib_manual/netcoreapp3.0/Microsoft.Web.WebView2.Core.xml",
         "lib_manual/netcoreapp3.0/Microsoft.Web.WebView2.WinForms.dll",
         "lib_manual/netcoreapp3.0/Microsoft.Web.WebView2.WinForms.xml",
         "lib_manual/netcoreapp3.0/Microsoft.Web.WebView2.Wpf.dll",
         "lib_manual/netcoreapp3.0/Microsoft.Web.WebView2.Wpf.xml",
-        "microsoft.web.webview2.1.0.2739.15.nupkg.sha512",
+        "microsoft.web.webview2.1.0.2903.40.nupkg.sha512",
         "microsoft.web.webview2.nuspec",
         "runtimes/win-arm64/native/WebView2Loader.dll",
         "runtimes/win-arm64/native_uap/Microsoft.Web.WebView2.Core.dll",
@@ -4754,7 +4758,7 @@
   "projectFileDependencyGroups": {
     "net7.0-windows7.0": [
       "Costura.Fody >= 5.7.0",
-      "Microsoft.Web.WebView2 >= 1.0.2739.15"
+      "Microsoft.Web.WebView2 >= 1.0.2903.40"
     ]
   },
   "packageFolders": {
@@ -4815,7 +4819,7 @@
           },
           "Microsoft.Web.WebView2": {
             "target": "Package",
-            "version": "[1.0.2739.15, )"
+            "version": "[1.0.2903.40, )"
           }
         },
         "imports": [

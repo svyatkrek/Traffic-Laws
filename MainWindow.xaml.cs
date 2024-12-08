@@ -18,6 +18,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Traffic_Laws.src;
+using Traffic_Laws.Windows;
 
 namespace Traffic_Laws
 {
@@ -140,14 +141,14 @@ namespace Traffic_Laws
 		{
 			ComboBox? comboBox = e.Source as ComboBox;
 			string type = comboBox.Name.Split("_")[1];
-			string selectedFile = "";
+			string selectedFile = String.Empty;
 			if (comboBox.SelectedIndex != 0) 
 				selectedFile = comboBox.SelectedItem.ToString();
 
 				
 			if (selectedCategory != statisticsButtonName)
 			{
-				ExWindow exam = new(type, selectedCategory, selectedFile ?? "");
+				ExWindow exam = new(type, selectedCategory, selectedFile ?? String.Empty);
 				exam.Show();
 				this.Hide();
 			}
@@ -157,6 +158,12 @@ namespace Traffic_Laws
 				statisticsWindow.Show();
 				this.Hide();
 			}
+		}
+		private void FactButton_Click(object sender, RoutedEventArgs e)
+		{
+			FactWindow factWindow = new();
+			factWindow.Show();
+			this.Hide();
 		}
 
 		private void DataWindow_Closing(object sender, EventArgs e)
@@ -173,9 +180,8 @@ namespace Traffic_Laws
 		private void Drag(object sender, RoutedEventArgs e)
 		{
 			if (Mouse.LeftButton == MouseButtonState.Pressed)
-			{
 				this.DragMove();
-			}
 		}
+
 	}
 }

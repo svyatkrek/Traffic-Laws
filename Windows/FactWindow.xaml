@@ -70,11 +70,11 @@
                                 <GradientStop Color="#FF32458B" Offset="0.361"/>
                             </LinearGradientBrush>
                         </Border.Background>
-                        <Image x:Name="ImageQuestion"  HorizontalAlignment="Left" Width="416" Margin="60,78,0,78"/>
+                        <Image x:Name="ImageFact"  HorizontalAlignment="Left" Width="416" Margin="50,78,10,78"/>
                     </Border>
-                    <TextBlock Width="525" Height="220" Margin="40,0,0,0"/>
+                    <TextBlock x:Name="TextBlockFact" Width="525" Height="220" Margin="40,0,0,0" TextWrapping="Wrap" FontSize="30" FontFamily="Alumni Sans" />
                 </StackPanel>
-                <Button  Content="СГЕНЕРИРОВАТЬ" x:Name="ButtonGenerate" Style="{DynamicResource ButtonStyleExamMenu}"   VerticalAlignment="Bottom" Width="200" Height="50" Margin="668,0,0,80"/>
+                <Button  Content="СГЕНЕРИРОВАТЬ" x:Name="ButtonGenerate" Style="{DynamicResource ButtonStyleFact}"   VerticalAlignment="Bottom" Width="200" Height="50" Margin="668,0,0,80" Click="ButtonGenerate_Click"/>
 
             </Grid>
 

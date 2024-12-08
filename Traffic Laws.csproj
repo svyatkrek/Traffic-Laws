@@ -1401,6 +1401,7 @@
     <None Remove="roadSign.png" />
     <None Remove="statisticsButton.png" />
     <None Remove="wheel.png" />
+    <None Remove="Windows\StatisticImage.png" />
   </ItemGroup>
 
   <ItemGroup>

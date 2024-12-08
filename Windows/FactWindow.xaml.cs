@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -11,6 +12,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Traffic_Laws.Entity;
+using Traffic_Laws.src;
 
 namespace Traffic_Laws.Windows
 {
@@ -19,10 +22,25 @@ namespace Traffic_Laws.Windows
     /// </summary>
     public partial class FactWindow : Window
     {
-        public FactWindow()
+		private FactService Service = new();
+		public FactWindow()
         {
             InitializeComponent();
-        }
+			FillInFact();
+
+		}
+
+		private void FillInFact()
+		{
+			IFact item = Service.GetFact();
+			ImageFact.Source = new BitmapImage(new Uri(item.ImageURL ?? String.Empty));
+			TextBlockFact.Text = item.Text;
+		}
+
+		private void ButtonGenerate_Click(object sender, RoutedEventArgs e)
+		{
+			FillInFact();
+		}
 
 		private void Menu_Button_Click(object sender, RoutedEventArgs e)
 		{
@@ -43,9 +61,8 @@ namespace Traffic_Laws.Windows
 		private void Drag(object sender, RoutedEventArgs e)
 		{
 			if (Mouse.LeftButton == MouseButtonState.Pressed)
-			{
 				this.DragMove();
-			}
 		}
-	}
+
+    }
 }

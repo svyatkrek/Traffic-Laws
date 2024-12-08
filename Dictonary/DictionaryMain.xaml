@@ -175,9 +175,9 @@
         <Setter Property="Effect">
             <Setter.Value>
                 <DropShadowEffect 
-Color="Black" 
-Opacity="0.55" 
-Direction="270" BlurRadius="5" ShadowDepth="1"/>
+                    Color="Black" 
+                    Opacity="0.55" 
+                    Direction="270" BlurRadius="5" ShadowDepth="1"/>
             </Setter.Value>
         </Setter>
     </Style>
@@ -194,9 +194,9 @@ Direction="270" BlurRadius="5" ShadowDepth="1"/>
         <Setter Property="Effect">
             <Setter.Value>
                 <DropShadowEffect 
-Color="Black" 
-Opacity="0.55" 
-Direction="270" BlurRadius="5" ShadowDepth="1"/>
+                    Color="Black" 
+                    Opacity="0.55" 
+                    Direction="270" BlurRadius="5" ShadowDepth="1"/>
             </Setter.Value>
         </Setter>
 
@@ -491,6 +491,89 @@ Direction="270" BlurRadius="5" ShadowDepth="1"/>
                     <Setter Property="Background" Value="Transparent"/>
                     <Setter Property="Foreground" Value="#B5B8B1"/>
                 </Trigger.Setters>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!-- Button Fact -->
+    <LinearGradientBrush x:Key="ButtonFact" EndPoint="0.5,1" StartPoint="0.5,0">
+        <LinearGradientBrush.RelativeTransform>
+            <TransformGroup>
+                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                <RotateTransform Angle="270" CenterX="0.5" CenterY="0.5"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </LinearGradientBrush.RelativeTransform>
+        <GradientStop Color="#3953AE" Offset="1.0"/>
+        <GradientStop Color="#32458B" Offset="0.2"/>
+        <GradientStop Color="#28345D" Offset="0.0"/>
+    </LinearGradientBrush>
+
+    <Style x:Key="ButtonStyleFact" TargetType="{x:Type Button}">
+        <Setter Property="Background" Value="{StaticResource ButtonFact}"/>
+        <Setter Property="Foreground" Value="#FFFFFF"/>
+        <Setter Property="FontSize" Value="30" />
+        <Setter Property="Width" Value="135" />
+        <Setter Property="Height" Value="50" />
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="FontFamily" Value="Alumni Sans"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" 
+                BorderBrush="{TemplateBinding BorderBrush}" 
+                BorderThickness="{TemplateBinding BorderThickness}" 
+                CornerRadius="15">
+                        <TextBlock Text="{TemplateBinding Content}" 
+                       Foreground="{TemplateBinding Foreground}" 
+                       FontFamily="{TemplateBinding FontFamily}" 
+                       FontSize="{TemplateBinding FontSize}" 
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center">
+                            <TextBlock.Effect>
+                                <DropShadowEffect 
+                                        Color="Black" 
+                                        Opacity="0.55" 
+                                        Direction="270" BlurRadius="5" ShadowDepth="1"/>
+                            </TextBlock.Effect>
+                        </TextBlock>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Trigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation
+                            Storyboard.TargetProperty="Width"
+                            To="220"
+                        Duration="0:0:0.2" />
+                            <DoubleAnimation
+                            Storyboard.TargetProperty="Height"
+                            To="60"
+                        Duration="0:0:0.2" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.EnterActions>
+                <Trigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation
+                            Storyboard.TargetProperty="Width"
+                            To="200"
+                        Duration="0:0:0.2" />
+                            <DoubleAnimation
+                    Storyboard.TargetProperty="Height"
+                    To="50"
+                Duration="0:0:0.2" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.ExitActions>
             </Trigger>
         </Style.Triggers>
     </Style>

@@ -28,7 +28,7 @@ namespace Traffic_Laws
         {
 			InitializeComponent();
 			Type = _typeWindow;
-			if (selectedFile == "")
+			if (selectedFile == String.Empty)
 				ServiceQuestion.InitData(Type, _category, true);
 			else
 				ServiceQuestion.InitData(Type, _category, false, selectedFile);
@@ -36,7 +36,7 @@ namespace Traffic_Laws
 			QuestionNumber = 0;
 			DrawPagination();
 			DrawQuestion();
-
+				
 		}
 
         private void TimerStart()
@@ -51,7 +51,6 @@ namespace Traffic_Laws
 			Time++;
 			TimeSpan span = new(0, 0, Time);
 			labelTime.Content = span.ToString(@"mm\:ss");
-
 		}
 
 
@@ -125,16 +124,13 @@ namespace Traffic_Laws
 						answerTextBlock.Foreground = Brushes.Red;
 
 						for (int i = 0; i < ServiceQuestion.Data[QuestionNumber].Answers.Count; ++i)
-						{
 							if (ServiceQuestion.Data[QuestionNumber].Answers[i].IsCorrect)
 							{
 								string answerTextBlockCorrectName = "answerText_" + (i + 1).ToString();
 								TextBlock textBlock = (TextBlock)this.FindName(answerTextBlockCorrectName);
 								textBlock.Foreground = Brushes.Green;
 							}
-						}
 					}
-
 				}
 			}
 		}
@@ -229,6 +225,14 @@ namespace Traffic_Laws
 			answerText_4.Foreground = Brushes.Black;
 
 		}
+		private void OffsetButtons_Click(object sender, RoutedEventArgs e)
+		{
+			Button? button = e.Source as Button;
+			if (button.Name.Split("_")[1] == "right")
+				PaginationScroll.ScrollToHorizontalOffset(PaginationScroll.HorizontalOffset + 195);
+			else
+				PaginationScroll.ScrollToHorizontalOffset(PaginationScroll.HorizontalOffset - 195);
+		}
 
 		private void DataWindow_Closing(object sender, EventArgs e)
 		{
@@ -243,18 +247,8 @@ namespace Traffic_Laws
 		private void Drag(object sender, RoutedEventArgs e)
 		{
 			if (Mouse.LeftButton == MouseButtonState.Pressed)
-			{
 				this.DragMove();
-			}
 		}
 
-		private void OffsetButtons_Click(object sender, RoutedEventArgs e)
-		{
-			Button? button = e.Source as Button;
-			if (button.Name.Split("_")[1] == "right")
-				PaginationScroll.ScrollToHorizontalOffset(PaginationScroll.HorizontalOffset + 195);
-			else
-				PaginationScroll.ScrollToHorizontalOffset(PaginationScroll.HorizontalOffset - 195);
-		}
 	}
 }

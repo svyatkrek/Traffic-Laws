@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Closing="DataWindow_Closing"
         Title="Traffic Laws" Height="770" Width="1080" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize">
+    <Window.Resources>
+        <FontFamily x:Key="AlumniSansMedium">pack://application:,,,/Resources/Fonts/AlumniSans-Medium.ttf#Alumni Sans</FontFamily>
+        <FontFamily x:Key="AlumniSansRegular">pack://application:,,,/Resources/Fonts/AlumniSans-Regular.ttf#Alumni Sans</FontFamily>
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
@@ -15,7 +19,7 @@
         <Grid x:Name="header" Grid.Row="0" Background="#FF28345D">
             <Grid MouseDown="Drag" x:Name="dragHeader" HorizontalAlignment="Left" Width="985">
                 <Image Source="/images/logo.png" HorizontalAlignment="Left" Margin="0,6,0,6" />
-                <Label Content="ПРАВИЛА ДОРОЖНОГО ДВИЖЕНИЯ РЕСПУБЛИКИ БЕЛАРУСЬ" HorizontalAlignment="Left" Margin="80,0,0,0" VerticalAlignment="Center" FontSize="24"  Foreground="White" FontFamily="Alumni Sans" Width="895"/>
+                <Label Content="ПРАВИЛА ДОРОЖНОГО ДВИЖЕНИЯ РЕСПУБЛИКИ БЕЛАРУСЬ" HorizontalAlignment="Left" Margin="80,0,0,0" VerticalAlignment="Center" FontSize="24"  Foreground="White" FontFamily="{StaticResource AlumniSansRegular}" Width="895"/>
             </Grid>
             <Button x:Name="exitButton" HorizontalAlignment="Right" Width="25" Height="25" Margin="0,0,20,0" BorderBrush="{x:Null}" Click="DataWindow_Closing" Style="{DynamicResource HeaderButton}">
                 <Button.Background>
@@ -44,7 +48,7 @@
             <Grid Grid.Row="0" HorizontalAlignment="Left" Width="1080" Grid.ColumnSpan="2" >
                 <Grid Margin="0,0,0,0">
                     <Image x:Name="dynamicImage" Source="/images/wheel.png" HorizontalAlignment="Left" Width="100" Height="100" Margin="20,25,0,25"/>
-                    <Label Content="ПРОВЕРЬ СВОИ&#10;ЗНАНИЯ!" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="40"  Foreground="White" FontFamily="Alumni Sans" Width="320" Height="112" Margin="136,28,0,0" FontWeight="Bold">
+                    <Label Content="ПРОВЕРЬ СВОИ&#10;ЗНАНИЯ!" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="40"  Foreground="White" FontFamily="{StaticResource AlumniSansRegular}" Width="320" Height="112" Margin="136,28,0,0" FontWeight="Bold">
                         <Label.Effect>
                             <DropShadowEffect  Color="Black" Direction="270" BlurRadius="10" Opacity="0.45"/>
                         </Label.Effect>
@@ -56,7 +60,7 @@
                 <Grid Width="600" Height="100" VerticalAlignment="Top" Margin="0,20,0,0" >
                     <Grid Width="240" Height="55" HorizontalAlignment="Left" Margin="20,0,0,0">
                         <ComboBox SelectionChanged="ComboBoxStart_Click"  ItemsPanel="{DynamicResource ComboBoxPanelCustom}" x:Name="button_tickets"  ItemContainerStyle="{DynamicResource ComboBoxItemContainerStyleCustom}" Style="{DynamicResource ComboBoxStyleCustom}" FontSize="16" Width="240" Height="55" />
-                        <TextBlock x:Name="TextBoxExam" Text="      ЭКЗАМЕН" FontFamily="Alumni Sans" FontSize="40" Margin="0,5,0,0"  IsHitTestVisible="False" Foreground="#99000000" >
+                        <TextBlock x:Name="TextBoxExam" Text="      ЭКЗАМЕН" FontFamily="{StaticResource AlumniSansRegular}" FontSize="40" Margin="0,5,0,0"  IsHitTestVisible="False" Foreground="#99000000" >
                             <TextBlock.Effect>
                                 <DropShadowEffect 
                                     Color="Black" 
@@ -67,7 +71,7 @@
                     </Grid>
                     <Grid Width="240" Height="55" HorizontalAlignment="Right" Margin="0,0,20,0">
                         <ComboBox SelectionChanged="ComboBoxStart_Click" ItemsPanel="{DynamicResource ComboBoxPanelCustom}" x:Name="button_topics" ItemContainerStyle="{DynamicResource ComboBoxItemContainerStyleCustom}" Style="{DynamicResource ComboBoxStyleCustom}" FontSize="16" Width="240" Height="55" />
-                        <TextBlock x:Name="TextBoxTest" Text="        ЗАЧЕТ" FontFamily="Alumni Sans" FontSize="40" Margin="0,5,0,0" IsHitTestVisible="False"  Foreground="#99000000">
+                        <TextBlock x:Name="TextBoxTest" Text="        ЗАЧЕТ" FontFamily="{StaticResource AlumniSansRegular}" FontSize="40" Margin="0,5,0,0" IsHitTestVisible="False"  Foreground="#99000000">
                             <TextBlock.Effect>
                                 <DropShadowEffect 
                                     Color="Black" 

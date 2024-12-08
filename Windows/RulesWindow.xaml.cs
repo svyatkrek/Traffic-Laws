@@ -23,7 +23,7 @@ namespace Traffic_Laws
     /// </summary>
     public partial class RulesWindow : Window
     {
-		private RulesService Service = new();
+		private readonly RulesService Service = new();
 		private const string AppendixesFlag = "appendixes";
 		private const string RulesFlag = "rules";
 		private int CurrentOpenIndexAppendix = -1;
@@ -34,7 +34,7 @@ namespace Traffic_Laws
 			CreateChapterMenu();
 		}
 
-		private void DrawingTextBlock(StackPanel parentElement, int fontSize, string text, FontWeight fontWeight)
+		private static void DrawingTextBlock(StackPanel parentElement, int fontSize, string text, FontWeight fontWeight)
 		{
 			if (text != String.Empty)
 			{

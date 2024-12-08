@@ -4,6 +4,9 @@
 
     <!-- ButtonMain -->
 
+   <FontFamily x:Key="AlumniSansMedium">pack://application:,,,/Resources/Fonts/AlumniSans-Medium.ttf#Alumni Sans</FontFamily>
+   <FontFamily x:Key="AlumniSansRegular">pack://application:,,,/Resources/Fonts/AlumniSans-Regular.ttf#Alumni Sans</FontFamily>
+
     <Style x:Key="ButtonStyleMainMenu" TargetType="{x:Type Button}">
         <Setter Property="Background" Value="#E3E6FF"/>
         <Setter Property="Foreground" Value="Black"/>
@@ -11,7 +14,7 @@
         <Setter Property="Cursor"  Value="Hand"/>
         <Setter Property="HorizontalAlignment" Value="Right"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
-        <Setter Property="FontFamily" Value="Alumni Sans"/>
+        <Setter Property="FontFamily" Value="{StaticResource AlumniSansRegular}"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
@@ -86,7 +89,7 @@
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="HorizontalAlignment" Value="left"/>
         <Setter Property="FontSize" Value="30"/>
-        <Setter Property="FontFamily" Value="Alumni Sans"/>
+        <Setter Property="FontFamily" Value="{StaticResource AlumniSansRegular}"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
@@ -126,7 +129,7 @@
         <Setter Property="Foreground" Value="Black"/>
         <Setter Property="BorderBrush" Value="Transparent"/>
         <Setter Property="BorderThickness" Value="2"/>
-        <Setter Property="FontFamily" Value="Alumni Sans"/>
+        <Setter Property="FontFamily" Value="{StaticResource AlumniSansRegular}"/>
         <Setter Property="HorizontalAlignment" Value="Right"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="FontSize" Value="23"/>
@@ -170,7 +173,7 @@
     <Style x:Key="TextBoxBase" TargetType="{x:Type TextBlock}">
         <Setter Property="FontSize" Value="26"/>
         <Setter Property="FontStyle" Value="Italic" />
-        <Setter Property="FontFamily" Value="Alumni Sans"/>
+        <Setter Property="FontFamily" Value="{StaticResource AlumniSansRegular}"/>
         <Setter Property="Foreground" Value="Black"/>
         <Setter Property="TextWrapping" Value="Wrap"/>
         <Setter Property="Margin" Value="40,0,0,0"/>
@@ -188,7 +191,7 @@
 
     <Style x:Key="labelFinal" TargetType="{x:Type Label}">
         <Setter Property="Foreground" Value="Black"/>
-        <Setter Property="FontFamily" Value="Alumni Sans"/>
+        <Setter Property="FontFamily" Value="{StaticResource AlumniSansRegular}"/>
         <Setter Property="HorizontalAlignment" Value="Left"/>
         <Setter Property="VerticalAlignment" Value="Top"/>
         <Setter Property="FontSize" Value="40"/>
@@ -229,7 +232,7 @@
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="HorizontalAlignment" Value="Left"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
-        <Setter Property="FontFamily" Value="Alumni Sans"/>
+        <Setter Property="FontFamily" Value="{StaticResource AlumniSansRegular}"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
@@ -319,8 +322,8 @@
         <Setter Property="Cursor"  Value="Hand"/>
         <Setter Property="HorizontalAlignment" Value="Right"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
-            <Setter Property="FontFamily" Value="Alumni Sans"/>
-            <Setter Property="Template">
+        <Setter Property="FontFamily" Value="{StaticResource AlumniSansRegular}"/>
+        <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
                         <Border Background="{TemplateBinding Background}" 
@@ -391,7 +394,7 @@
         <Setter Property="Cursor"  Value="Hand"/>
         <Setter Property="HorizontalAlignment" Value="Right"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
-        <Setter Property="FontFamily" Value="Alumni Sans"/>
+        <Setter Property="FontFamily" Value="{StaticResource AlumniSansRegular}"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
@@ -457,7 +460,7 @@
 
     <Style x:Key="RulesLabel" TargetType="{x:Type Label}">
         <Setter Property="Foreground" Value="#FFFFFF"/>
-        <Setter Property="FontFamily" Value="Alumni Sans"/>
+        <Setter Property="FontFamily" Value="{StaticResource AlumniSansRegular}"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="VerticalAlignment" Value="Top"/>
         <Setter Property="FontSize" Value="27"/>
@@ -478,6 +481,7 @@ Direction="270" BlurRadius="5" ShadowDepth="1"/>
         <Setter Property="FontWeight" Value="Bold"/>
         <Setter Property="Foreground" Value="White"/>
         <Setter Property="FontSize" Value="48"/>
+        <Setter Property="FontFamily" Value="{StaticResource AlumniSansRegular}"/>
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="BorderBrush" Value="Transparent"/>
         <Setter Property="Height" Value="80"/>
@@ -526,7 +530,7 @@ Direction="270" BlurRadius="5" ShadowDepth="1"/>
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="HorizontalAlignment" Value="Left"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
-        <Setter Property="FontFamily" Value="Alumni Sans"/>
+        <Setter Property="FontFamily" Value="{StaticResource AlumniSansRegular}"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
@@ -588,6 +592,7 @@ Direction="270" BlurRadius="5" ShadowDepth="1"/>
 
     <Style x:Key="GameButtonStyle" TargetType="{x:Type Button}">
         <Setter Property="Cursor"  Value="Hand"/>
+        <Setter Property="FontFamily" Value="{StaticResource AlumniSansRegular}"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">

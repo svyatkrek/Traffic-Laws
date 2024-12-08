@@ -1431,14 +1431,7 @@
     <Resource Include="Resources\Fonts\AlumniSans-Medium.ttf" />
     <Resource Include="Resources\Fonts\AlumniSans-Regular.ttf" />
   </ItemGroup>
-	<ItemGroup>
-		<Content Include="Resources\Fonts\AlumniSans-Medium.ttf">
-			<CopyToOutputDirectory>Alumni Sans Medium</CopyToOutputDirectory>
-		</Content>
-		<Content Include="Resources\Fonts\AlumniSans-Regular.ttf">
-			<CopyToOutputDirectory>Alumni Sans</CopyToOutputDirectory>
-		</Content>
-	</ItemGroup>
+
 	<ItemGroup>
 		<None Remove="Microsoft.Web.WebView2.Core.winmd" />
 	</ItemGroup>

@@ -68,3 +68,6 @@ C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Windows\Fact
 C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Windows\FactWindow.baml
 C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Windows\GameWindow.g.cs
 C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Windows\GameWindow.baml
+C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Dictonary\DictionaryButtons.baml
+C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Windows\VideoWindow.g.cs
+C:\Users\Mark\Desktop\project\Traffic-Laws\obj\Debug\net7.0-windows\Windows\VideoWindow.baml

@@ -27,8 +27,14 @@
     <Compile Update="Windows\StatisticsWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Windows\VideoWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Dictonary\DictionaryButtons.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Dictonary\DictionaryMain.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -54,6 +60,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Windows\StatisticsWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\VideoWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

@@ -49,8 +49,8 @@
                         <GradientStop Color="#FF32458B" Offset="0.676"/>
                     </LinearGradientBrush>
                 </Grid.Background>
-                <Button Width="170" Height="50" HorizontalAlignment="Left" Margin="30,0,0,0" FontSize="30" Content="МЕНЮ" Click="Menu_Button_Click" Style="{DynamicResource ButtonStyleMainMenu}" />
-                <Label x:Name="mainLabel" Content="ФАКТЫ" Style="{DynamicResource labelFinal}"  FontSize="45" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontWeight="Bold"/>
+                <Button Width="165" Height="47" HorizontalAlignment="Left" Margin="24,0,0,0" FontSize="30" Content="МЕНЮ" Click="Menu_Button_Click" Style="{DynamicResource HeaderMenuButton}" />
+                <Label x:Name="mainLabel" Content="ФАКТЫ" Style="{DynamicResource labelFinal}"  FontSize="45" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontWeight="Bold" Cursor=""/>
             </Grid>
             <Grid Grid.Row="1" Background="#FFE3E6FF">
                 <StackPanel Orientation="Horizontal" Height="550" VerticalAlignment="Top">
@@ -72,7 +72,7 @@
                         </Border.Background>
                         <Image x:Name="ImageFact"  HorizontalAlignment="Left" Width="425" Margin="25,25,0,25"/>
                     </Border>
-                    <TextBlock x:Name="TextBlockFact" Width="525" Height="220" Margin="40,0,0,0" TextWrapping="Wrap" FontSize="30" FontFamily="Alumni Sans" />
+                    <TextBlock x:Name="TextBlockFact" Width="525" Height="220" Margin="40,0,0,0" TextWrapping="Wrap" FontSize="30" FontFamily="{StaticResource AlumniSansRegular}" />
                 </StackPanel>
                 <Button  Content="СГЕНЕРИРОВАТЬ" x:Name="ButtonGenerate" Style="{DynamicResource ButtonStyleFact}"   VerticalAlignment="Bottom" Width="200" Height="50" Margin="668,0,0,80" Click="ButtonGenerate_Click"/>
 

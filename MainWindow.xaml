@@ -83,7 +83,7 @@
                 </Grid>
                 <Grid Width="600" Height="100" VerticalAlignment="Bottom" Margin="0,0,0,20" >
                     <Button Content="ФАКТЫ" x:Name="FactButton" Style="{DynamicResource ButtonStyleMainMenu}" FontSize="40"  HorizontalAlignment="Left" Margin="20,0,0,0"  Width="240" Height="55" Click="FactButton_Click" />
-                    <Button Content="ВИДЕО" x:Name="VideoButton"  Style="{DynamicResource ButtonStyleMainMenu}" FontSize="40"  Margin="0,0,20,0" HorizontalAlignment="Right"  Width="240" Height="55" />
+                    <Button Content="ВИДЕО" x:Name="VideoButton"  Style="{DynamicResource ButtonStyleMainMenu}" FontSize="40"  Margin="0,0,20,0" HorizontalAlignment="Right"  Width="240" Height="55" Click="VideoButton_Click" />
                 </Grid>
             </Grid>
             <Grid Grid.Row="2" Grid.ColumnSpan="2">

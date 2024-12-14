@@ -15,7 +15,7 @@
         <Grid x:Name="header" Grid.Row="0" Background="#FF28345D">
             <Grid MouseDown="Drag" x:Name="dragHeader" HorizontalAlignment="Left" Width="985">
                 <Image Source="/images/logo.png" HorizontalAlignment="Left" Margin="0,6,0,6" />
-                <Label Content="ПРАВИЛА ДОРОЖНОГО ДВИЖЕНИЯ РЕСПУБЛИКИ БЕЛАРУСЬ" HorizontalAlignment="Left" Margin="80,0,0,0" VerticalAlignment="Center" FontSize="24"  Foreground="White" FontFamily="Alumni Sans" Width="895"/>
+                <Label Content="ПРАВИЛА ДОРОЖНОГО ДВИЖЕНИЯ РЕСПУБЛИКИ БЕЛАРУСЬ" HorizontalAlignment="Left" Margin="80,0,0,0" VerticalAlignment="Center" FontSize="24"  Foreground="White" FontFamily="{StaticResource AlumniSansRegular}" Width="895"/>
             </Grid>
             <Button x:Name="exitButton" Style="{DynamicResource HeaderButton}" HorizontalAlignment="Right" Width="25" Height="25" Margin="0,0,20,0" BorderBrush="{x:Null}" Click="DataWindow_Closing">
                 <Button.Background>
@@ -81,7 +81,7 @@
                                 <GradientStop Color="#FF32458B" Offset="0.361"/>
                             </LinearGradientBrush>
                         </Border.Background>
-                        <Image x:Name="ImageQuestion"  HorizontalAlignment="Left" Width="416" Margin="60,78,0,78"/>
+                        <Image x:Name="ImageQuestion"  HorizontalAlignment="Left" Width="400" Margin="40,60,0,60"/>
                     </Border>
                     <Grid Margin="20,15,0,0" Height="350">
                         <StackPanel x:Name="stackPanelChecked" Width="540" >

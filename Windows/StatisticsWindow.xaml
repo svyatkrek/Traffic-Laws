@@ -15,7 +15,7 @@
         <Grid x:Name="header" Grid.Row="0" Background="#FF28345D">
             <Grid MouseDown="Drag" x:Name="dragHeader" HorizontalAlignment="Left" Width="985">
                 <Image Source="/images/logo.png" HorizontalAlignment="Left" Margin="0,6,0,6" />
-                <Label Content="ПРАВИЛА ДОРОЖНОГО ДВИЖЕНИЯ РЕСПУБЛИКИ БЕЛАРУСЬ" HorizontalAlignment="Left" Margin="80,0,0,0" VerticalAlignment="Center" FontSize="24"  Foreground="White" FontFamily="Alumni Sans" Width="895"/>
+                <Label Content="ПРАВИЛА ДОРОЖНОГО ДВИЖЕНИЯ РЕСПУБЛИКИ БЕЛАРУСЬ" HorizontalAlignment="Left" Margin="80,0,0,0" VerticalAlignment="Center" FontSize="24"  Foreground="White" FontFamily="{StaticResource AlumniSansRegular}" Width="895"/>
             </Grid>
             <Button x:Name="exitButton" HorizontalAlignment="Right" Width="25" Height="25" Margin="0,0,20,0" BorderBrush="{x:Null}" Click="DataWindow_Closing">
                 <Button.Background>
@@ -34,7 +34,6 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Grid>
-
                 <Button Width="165" Height="47" HorizontalAlignment="Left" Margin="24,0,0,0" FontSize="30" Content="МЕНЮ" Click="Menu_Button_Click" Style="{DynamicResource HeaderMenuButton}" />
                 <Label x:Name="mainLabel" Content="ВАША СТАТИСТИКА" Style="{DynamicResource labelFinal}"  FontSize="45" Foreground="White" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 <Grid.Background>
@@ -44,7 +43,6 @@
                         <GradientStop Color="#FF32458B" Offset="0.556"/>
                     </LinearGradientBrush>
                 </Grid.Background>
-
             </Grid>
             <Grid Grid.Row="1" Background="#FFE3E6FF">
                 <Grid.ColumnDefinitions>
@@ -58,7 +56,7 @@
                     <Label x:Name="timeLabel" Content="ЛУЧШЕЕ ВРЕМЯ: " Style="{DynamicResource labelFinal}" Margin="0,357,0,0"  />
                 </Grid>
                 <Grid Grid.Column="1">
-                    <Label x:Name="passedLabel" Content="НАШ СЛОНЯРА!" FontSize="36" FontFamily="Alumni Sans" FontWeight="Bold" Margin="45,130,147,448" />
+                    <Label x:Name="passedLabel" Content="НАШ СЛОНЯРА!" FontSize="36" FontFamily="{StaticResource AlumniSansRegular}" FontWeight="Bold" Margin="45,130,147,448" />
                     <Image x:Name="ImageStatistic" HorizontalAlignment="Left" Height="266" Margin="0,200,0,0" VerticalAlignment="Top" Width="258" Source="/images/StatisticImage.png" Stretch="Fill"/>
                 </Grid>
             </Grid>

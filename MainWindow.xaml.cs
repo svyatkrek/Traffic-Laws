@@ -86,7 +86,7 @@ namespace Traffic_Laws
                     oldActiveButton.Foreground = button.Foreground;
                 
 
-				button.Foreground = new SolidColorBrush(Color.FromRgb( 13, 180, 185));
+				button.Foreground = new SolidColorBrush(Color.FromRgb( 21, 43, 130));
 				selectedCategory = button.Name;
 			}
 			InitializeComboBox();
@@ -165,6 +165,18 @@ namespace Traffic_Laws
 			factWindow.Show();
 			this.Hide();
 		}
+		private void VideoButton_Click(object sender, RoutedEventArgs e)
+		{
+			VideoWindow videoWindow = new();
+			videoWindow.Show();
+			this.Hide();
+		}
+		private void GameButton_Click(object sender, RoutedEventArgs e)
+		{
+			GameWindow gameWindow = new();
+			gameWindow.Show();
+			this.Hide();
+		}
 
 		private void DataWindow_Closing(object sender, EventArgs e)
 		{
@@ -183,11 +195,5 @@ namespace Traffic_Laws
 				this.DragMove();
 		}
 
-		private void GameButton_Click(object sender, RoutedEventArgs e)
-		{
-			GameWindow gameWindow = new();
-			gameWindow.Show();
-			this.Hide();
-		}
-    }
+	}
 }

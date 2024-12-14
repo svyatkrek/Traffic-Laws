@@ -15,7 +15,7 @@
         <Grid x:Name="header" Grid.Row="0" Background="#FF28345D">
             <Grid MouseDown="Drag" x:Name="dragHeader" HorizontalAlignment="Left" Width="985">
                 <Image Source="/images/logo.png" HorizontalAlignment="Left" Margin="0,6,0,6" />
-                <Label Content="ПРАВИЛА ДОРОЖНОГО ДВИЖЕНИЯ РЕСПУБЛИКИ БЕЛАРУСЬ" HorizontalAlignment="Left" Margin="80,0,0,0" VerticalAlignment="Center" FontSize="24"  Foreground="White" FontFamily="Alumni Sans" Width="895"/>
+                <Label Content="ПРАВИЛА ДОРОЖНОГО ДВИЖЕНИЯ РЕСПУБЛИКИ БЕЛАРУСЬ" HorizontalAlignment="Left" Margin="80,0,0,0" VerticalAlignment="Center" FontSize="24"  Foreground="White" FontFamily="{StaticResource AlumniSansRegular}" Width="895"/>
             </Grid>
             <Button x:Name="exitButton" HorizontalAlignment="Right" Width="25" Height="25" Margin="0,0,20,0" BorderBrush="{x:Null}" Click="DataWindow_Closing" Style="{DynamicResource HeaderButton}">
                 <Button.Background>

@@ -14,7 +14,7 @@
         <Grid x:Name="header" Grid.Row="0" Background="#FF28345D">
             <Grid MouseDown="Drag" x:Name="dragHeader" HorizontalAlignment="Left" Width="985">
                 <Image Source="/images/logo.png" HorizontalAlignment="Left" Margin="0,6,0,6" />
-                <Label Content="ПРАВИЛА ДОРОЖНОГО ДВИЖЕНИЯ РЕСПУБЛИКИ БЕЛАРУСЬ" HorizontalAlignment="Left" Margin="80,0,0,0" VerticalAlignment="Center" FontSize="24"  Foreground="White" FontFamily="Alumni Sans" Width="895"/>
+                <Label Content="ПРАВИЛА ДОРОЖНОГО ДВИЖЕНИЯ РЕСПУБЛИКИ БЕЛАРУСЬ" HorizontalAlignment="Left" Margin="80,0,0,0" VerticalAlignment="Center" FontSize="24"  Foreground="White" FontFamily="{StaticResource AlumniSansRegular}" Width="895"/>
             </Grid>
             <Button x:Name="exitButton" Style="{DynamicResource HeaderButton}" HorizontalAlignment="Right" Width="25" Height="25" Margin="0,0,20,0" BorderBrush="{x:Null}" Click="DataWindow_Closing">
                 <Button.Background>
@@ -49,7 +49,7 @@
                         <GradientStop Color="#FF32458B" Offset="0.676"/>
                     </LinearGradientBrush>
                 </Grid.Background>
-                <Button Width="170" Height="50" HorizontalAlignment="Left" Margin="30,0,0,0" FontSize="30" Content="МЕНЮ" Click="Menu_Button_Click" Style="{DynamicResource ButtonStyleMainMenu}" />
+                <Button Width="170" Height="50" HorizontalAlignment="Left" Margin="30,0,0,0" FontSize="30" Content="МЕНЮ" Click="Menu_Button_Click" Style="{DynamicResource HeaderMenuButton}" />
                 <Label x:Name="mainLabel" Content="ИГРА" Style="{DynamicResource labelFinal}"  FontSize="45" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontWeight="Bold"/>
             </Grid>
             <Grid Grid.Row="1" Margin="15,15,15,15">

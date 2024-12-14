@@ -27,7 +27,12 @@ namespace Traffic_Laws
 		private const string AppendixesFlag = "appendixes";
 		private const string RulesFlag = "rules";
 		private int CurrentOpenIndexAppendix = -1;
+		private const int RootAppendixFlag = 1234;
 		private Button? SelectedButton = null;
+		private const int TitleFontSize = 36;
+		private const int TextFontSize = 20;
+		private const int MenuMainTextFontSize = 22;
+		private const int MenuSubItemTextFontSize = 18;
 		public RulesWindow()
         {
             InitializeComponent();
@@ -54,18 +59,18 @@ namespace Traffic_Laws
 		private void DrawingRulesPageByIndex(int index)
 		{
 			PagePanel.Children.Clear();
-			DrawingTextBlock(PagePanel, 42, Service.Data.Rules[index].Title ?? String.Empty, FontWeights.Bold);
-			DrawingTextBlock(PagePanel, 20, Service.Data.Rules[index].Text ?? String.Empty, FontWeights.Normal);
+			DrawingTextBlock(PagePanel, TitleFontSize, Service.Data.Rules[index].Title ?? String.Empty, FontWeights.Bold);
+			DrawingTextBlock(PagePanel, TextFontSize, Service.Data.Rules[index].Text ?? String.Empty, FontWeights.Normal);
 		}
 
 		private void DrawingAppendixesPageByIndex(int index, int indexSubItem)
 		{
 			PagePanel.Children.Clear();
-			DrawingTextBlock(PagePanel, 42, Service.Data.Appendixes[index].Items[indexSubItem].Title ?? String.Empty, FontWeights.Bold);
+			DrawingTextBlock(PagePanel, TitleFontSize, Service.Data.Appendixes[index].Items[indexSubItem].Title ?? String.Empty, FontWeights.Bold);
 
 			for (int i = 0; i < Service.Data.Appendixes[index].Items[indexSubItem].Contents.Count; ++i)
 			{
-				DrawingTextBlock(PagePanel, 20, Service.Data.Appendixes[index].Items[indexSubItem].Contents[i].Text ?? String.Empty, FontWeights.Normal);
+				DrawingTextBlock(PagePanel, TextFontSize, Service.Data.Appendixes[index].Items[indexSubItem].Contents[i].Text ?? String.Empty, FontWeights.Normal);
 
 				if (Service.Data.Appendixes[index].Items[indexSubItem].Contents[i].ImageURL != String.Empty)
 				{
@@ -85,7 +90,7 @@ namespace Traffic_Laws
 			List<Border> borders = RulesPanel.Children.OfType<Border>().ToList();
 
 			foreach (Border border in borders)
-				if (Convert.ToInt32(border.Name.Split("_")[2]) == index && border.Name.Split("_")[1] == AppendixesFlag && Convert.ToInt32(border.Name.Split("_")[3]) != 1000)
+				if (Convert.ToInt32(border.Name.Split("_")[2]) == index && border.Name.Split("_")[1] == AppendixesFlag && Convert.ToInt32(border.Name.Split("_")[3]) != RootAppendixFlag)
 				{
 					border.Visibility = visibility;
 					if (visibility == Visibility.Visible && Convert.ToInt32(border.Name.Split("_")[3]) == 0)
@@ -103,14 +108,14 @@ namespace Traffic_Laws
 			if (SelectedButton != null)
 				SelectedButton.Background = new SolidColorBrush(Color.FromArgb(0, 0, 0, 0));
 			
-			button.Background = new SolidColorBrush(Color.FromRgb(85, 207, 214));
+			button.Background = new SolidColorBrush(Color.FromRgb(22, 41, 109));
 			SelectedButton = button;
 
 			string flag = button.Name.Split("_")[1];
 			int index = Convert.ToInt32(button.Name.Split("_")[2]);
 			int indexSubItem = Convert.ToInt32(button.Name.Split("_")[3]);
 
-			if (flag == AppendixesFlag && indexSubItem == 1000)
+			if (flag == AppendixesFlag && indexSubItem == RootAppendixFlag)
 				if (CurrentOpenIndexAppendix != index)
 				{
 					MakeVisibleByIndex(index, Visibility.Visible);
@@ -132,7 +137,7 @@ namespace Traffic_Laws
 		private void CreateChapterMenuItem(int fontSize, string flag, string text, int customIndex, int appendixesIndex)
 		{
 			Visibility visibility = Visibility.Visible;
-			if (appendixesIndex != 1000)
+			if (appendixesIndex != RootAppendixFlag)
 				visibility = Visibility.Collapsed;
 
 			TextBlock textBlock = new()
@@ -155,7 +160,7 @@ namespace Traffic_Laws
 			{
 				Name = string.Format("BorderButtonMenu_{0}_{1}_{2}", flag, customIndex.ToString(), appendixesIndex.ToString()),
 				BorderBrush = new SolidColorBrush(Color.FromRgb(255, 255, 255)),
-				BorderThickness = new Thickness(0, 0, 0, 3),
+				BorderThickness = new Thickness(0, 0, 0, 2),
 				Child = button,
 				Visibility = visibility
 			};
@@ -183,11 +188,11 @@ namespace Traffic_Laws
 					text = Service.Data.Rules[customIndex].Name;
 				}
 
-				CreateChapterMenuItem(20, flag, text ?? String.Empty, customIndex, 1000);
+				CreateChapterMenuItem(MenuMainTextFontSize, flag, text ?? String.Empty, customIndex, RootAppendixFlag);
 
 				if (flag == AppendixesFlag)
 					for (int j = 0; j < Service.Data.Appendixes[customIndex].Items.Count; j++)
-						CreateChapterMenuItem(16, flag, Service.Data.Appendixes[customIndex].Items[j].Name ?? String.Empty, customIndex, j);
+						CreateChapterMenuItem(MenuSubItemTextFontSize, flag, Service.Data.Appendixes[customIndex].Items[j].Name ?? String.Empty, customIndex, j);
 			}
 		}
 

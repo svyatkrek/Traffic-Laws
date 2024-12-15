@@ -317,11 +317,11 @@
       },
       {
         "answer_text": "Разрешается, если автомобиль будет находиться не ближе 5 м от края пересекаемой проезжей части",
-        "is_correct": true
+        "is_correct": false
       },
       {
         "answer_text": "Запрещается",
-        "is_correct": false
+        "is_correct": true
       }
     ],
     "correct_answer": "Правильный ответ: 2",

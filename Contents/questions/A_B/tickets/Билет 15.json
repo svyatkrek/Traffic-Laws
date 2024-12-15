@@ -39,11 +39,11 @@
     "answers": [
       {
         "answer_text": "Только в направлении Б",
-        "is_correct": false
+        "is_correct": true
       },
       {
         "answer_text": "В направлениях А и Б",
-        "is_correct": true
+        "is_correct": false
       },
       {
         "answer_text": "В направлениях Б и В",
@@ -435,10 +435,6 @@
       {
         "answer_text": "Только по траектории Б",
         "is_correct": true
-      },
-      {
-        "answer_text": "По траекториям А или Б",
-        "is_correct": false
       },
       {
         "answer_text": "По траекториям Б или В",

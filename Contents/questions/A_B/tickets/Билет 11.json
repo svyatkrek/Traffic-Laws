@@ -499,7 +499,7 @@
     "answers": [
       {
         "answer_text": "А и Г",
-        "is_correct": false
+        "is_correct": true
       },
       {
         "answer_text": "Б и В",
@@ -507,7 +507,7 @@
       },
       {
         "answer_text": "А и В",
-        "is_correct": true
+        "is_correct": false
       },
       {
         "answer_text": "Б и Г",

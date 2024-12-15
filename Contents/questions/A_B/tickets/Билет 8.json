@@ -259,11 +259,11 @@
       },
       {
         "answer_text": "По правой или средней полосе",
-        "is_correct": false
+        "is_correct": true
       },
       {
         "answer_text": "Только по правой полосе",
-        "is_correct": true
+        "is_correct": false
       }
     ],
     "correct_answer": "Правильный ответ: 3",

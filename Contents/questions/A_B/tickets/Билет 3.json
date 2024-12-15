@@ -256,7 +256,7 @@
     "answers": [
       {
         "answer_text": "Только по правой",
-        "is_correct": true
+        "is_correct": false
       },
       {
         "answer_text": "Только по левой",
@@ -264,7 +264,7 @@
       },
       {
         "answer_text": "По любой",
-        "is_correct": false
+        "is_correct": true
       }
     ],
     "correct_answer": "Правильный ответ: 1",
@@ -368,7 +368,7 @@
     "answers": [
       {
         "answer_text": "Проедете перекрёсток первым",
-        "is_correct": true
+        "is_correct": false
       },
       {
         "answer_text": "Уступите дорогу легковому автомобилю",
@@ -376,7 +376,7 @@
       },
       {
         "answer_text": "Уступите дорогу обоим транспортным средствам",
-        "is_correct": false
+        "is_correct": true
       }
     ],
     "correct_answer": "Правильный ответ: 1",

@@ -422,7 +422,7 @@
     "answers": [
       {
         "answer_text": "Запрещается",
-        "is_correct": false
+        "is_correct": true
       },
       {
         "answer_text": "Разрешается только по крайней правой полосе",
@@ -430,7 +430,7 @@
       },
       {
         "answer_text": "Разрешается",
-        "is_correct": true
+        "is_correct": false
       }
     ],
     "correct_answer": "Правильный ответ: 3",

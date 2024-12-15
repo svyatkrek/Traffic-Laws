@@ -236,11 +236,11 @@
     "answers": [
       {
         "answer_text": "Только по А",
-        "is_correct": true
+        "is_correct": false
       },
       {
         "answer_text": "Только по Б",
-        "is_correct": false
+        "is_correct": true
       },
       {
         "answer_text": "По любой из указанных",

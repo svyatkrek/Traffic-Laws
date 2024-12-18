@@ -154,7 +154,8 @@ namespace Traffic_Laws
 			{
 				Name = string.Format("ButtonMenu_{0}_{1}_{2}", flag, customIndex.ToString(), appendixesIndex.ToString()),
 				Background = new SolidColorBrush(Color.FromArgb(0, 163, 184, 217)),
-				Content = textBlock
+				Content = textBlock,
+				Style = (Style)this.FindResource("NoColorHoverRules")
 			};
 			Border border = new()
 			{

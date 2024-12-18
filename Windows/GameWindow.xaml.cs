@@ -27,6 +27,7 @@ namespace Traffic_Laws.Windows
 
 		private void Menu_Button_Click(object sender, RoutedEventArgs e)
 		{
+			WebView.CoreWebView2?.Navigate("about:blank");
 			MainWindow menu = new();
 			menu.Show();
 			this.Hide();

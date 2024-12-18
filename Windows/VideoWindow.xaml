@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Traffic_Laws.Windows"
+        xmlns:local="clr-namespace:Traffic_Laws.Windows" xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
         mc:Ignorable="d"
         Title="VideoWindow" Height="770" Width="1080" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize">
     <Grid>
@@ -44,15 +44,20 @@
                 </Grid.Background>
             </Grid>
             <Grid Grid.Row="1" Margin="130, 50, 130, 50">
-                <WrapPanel Orientation="Horizontal">
-                    <Border Width="365" Height="255" Margin="15,15,15,15" CornerRadius="25">
-                        <Border.Background>
-                            <ImageBrush/>
-                        </Border.Background>
-                        <Button Background="{x:Null}" BorderBrush="{x:Null}"/>
-                    </Border>
-                </WrapPanel>
+                <ScrollViewer VerticalScrollBarVisibility="Hidden">
+                    <WrapPanel x:Name="MainPanel" Orientation="Horizontal">
+
+                    </WrapPanel>
+                </ScrollViewer>
             </Grid>
+        </Grid>
+        <Grid x:Name="VideoGrid" Grid.Row="1" Background="#4C000000" Visibility="Collapsed" >
+            <Border Margin="100, 150,100,100" Background="#28345D" CornerRadius="25" >
+                <Border x:Name="VideoContainer" Margin="50,30,50,20" CornerRadius="25" ClipToBounds="True" Background="Transparent">
+                    <wv2:WebView2 x:Name="VideoElement"/>
+                </Border>
+            </Border>
+            <Button x:Name="ExitVideoButton" Width="75" Height="75"  Margin="936,130,69,515"  Style="{StaticResource CornerRadiusButton}" BorderBrush="{x:Null}" Content="X" FontFamily="Comic Sans MS" Background="#FFDFF7F8" Click="ExitVideoButton_Click"/>
         </Grid>
     </Grid>
 </Window>

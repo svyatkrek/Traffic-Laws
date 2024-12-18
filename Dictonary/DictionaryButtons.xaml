@@ -416,4 +416,77 @@
             </Trigger>
         </Style.Triggers>
     </Style>
+
+    <Style x:Key="NoColorHover" TargetType="{x:Type Button}">
+        <Setter Property="Cursor"  Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" 
+                    BorderBrush="{TemplateBinding BorderBrush}" 
+                    BorderThickness="{TemplateBinding BorderThickness}" 
+                    CornerRadius="25">
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Trigger.Setters>
+                    <Setter Property="Background" Value="Transparent"/>
+                </Trigger.Setters>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="NoColorHoverRules" TargetType="{x:Type Button}">
+        <Setter Property="Cursor"  Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Trigger.Setters>
+                    <Setter Property="Background" Value="Transparent"/>
+                </Trigger.Setters>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="CornerRadiusButton" TargetType="{x:Type Button}">
+        <Setter Property="Cursor"  Value="Hand"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="FontSize" Value="48"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" 
+        BorderBrush="{TemplateBinding BorderBrush}" 
+        BorderThickness="{TemplateBinding BorderThickness}" 
+        CornerRadius="25">
+                        <TextBlock Text="{TemplateBinding Content}" 
+                                    Foreground="{TemplateBinding Foreground}" 
+                                    FontFamily="{TemplateBinding FontFamily}" 
+                                    FontSize="{TemplateBinding FontSize}" 
+                                    HorizontalAlignment="Center" 
+                                    VerticalAlignment="Center">
+                        </TextBlock>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Trigger.Setters>
+                    <Setter Property="Background" Value="Transparent"/>
+                </Trigger.Setters>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
 </ResourceDictionary>

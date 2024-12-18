@@ -92,6 +92,19 @@ namespace Traffic_Laws.Windows
 			VideoElement.ZoomFactor = 1.6;
 
 		}
+
+		private void SimulateKeyPress(Key key)
+		{
+			var keyDownEvent = new KeyEventArgs(Keyboard.PrimaryDevice,
+												PresentationSource.FromVisual(this),
+												0,
+												key)
+			{
+				RoutedEvent = Keyboard.KeyDownEvent
+			};
+
+			InputManager.Current.ProcessInput(keyDownEvent);
+		}
 		private void DataWindow_Closing(object sender, EventArgs e)
 		{
 			Application.Current.Shutdown();

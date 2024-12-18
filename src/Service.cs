@@ -37,8 +37,13 @@ namespace Traffic_Laws.src
             }
 
             ProcessData(folderPath);
-
-            for (int i = 0; i < Data.Count; i++)
+            int oldCount = Data.Count;
+            for (int i = 0; i < oldCount - 10; ++i)
+            {
+                int randomNumber = GetRandomNumber(0, Data.Count - 1);
+                Data.RemoveAt(randomNumber);
+			}
+            for (int i = 0; i < Data.Count; ++i)
             {
                 IQuestionState tmp = new();
                 QuestionsState.Add(tmp);

@@ -43,5 +43,36 @@ namespace Traffic_Laws.src
 			}
 			connection.Close();
 		}
-	}
+
+        public static void CreateVideoTable()
+        {
+            Batteries.Init();
+            using var connection = new SqliteConnection(ConnectionString);
+
+            connection.Open();
+            string query = @"
+                CREATE TABLE IF NOT EXISTS video (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    video_url TEXT NOT NULL,
+                    image_url TEXT NOT NULL,
+                    name TEXT NOT NULL
+                );";
+            using var command = new SqliteCommand(query, connection);
+            command.ExecuteNonQuery();
+
+            VideoService tmp = new();
+            IVideos videos = tmp.Data;
+
+            foreach (var video in videos.Videos)
+            {
+                string insertQuery = "INSERT INTO video (video_url, image_url, name) VALUES (@video_url, @image_url, @name);";
+                using var cmd = new SqliteCommand(insertQuery, connection);
+                cmd.Parameters.AddWithValue("@video_url", video.VideoURL ?? "");
+                cmd.Parameters.AddWithValue("@image_url", video.ImageURL ?? "");
+                cmd.Parameters.AddWithValue("@name", video.Name ?? "");
+                cmd.ExecuteNonQuery();
+            }
+            connection.Close();
+        }
+    }
 }

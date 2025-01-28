@@ -33,7 +33,7 @@ namespace Traffic_Laws
 		private const string statisticsButtonName = "checkButtonStatistics";
 		public MainWindow()
         {
-			//Connector.CreateFactsTable();
+			Connector.CreateVideoTable();
 
 			InitializeComponent();
 			InitializeComboBox();
